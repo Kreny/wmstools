@@ -2,7 +2,7 @@ ENVIRONMENT = 'development'
 PIAZZA_REFRESH_INTERVAL = 300000 # in milliseconds
 CHECK_DELIVERY_SITES_COUNT_EVERY = '2m'
 NO_SHOWN_ITEMS = 200 #number of test results to be shown
-SVN_BASE_PATH = 'http://192.176.148.85/svnrepo/wms'
+SVN_BASE_PATH = 'https://svn.etb.tieto.com/svn/NAM/trunk/products/titanium/GUI_testing/trunk'
 JIRA_BASE_PATH = 'http://192.176.148.85:8070/browse/'
 JIRA_REST_BASE_PATH = 'http://192.176.148.85:8070/rest/api/latest' # don't put slash at the end
 JIRA_USERNAME = 'requeste'
@@ -15,7 +15,7 @@ VERSIONS = {:wms_trunk =>
   {:name => 'trunk', # TI_AUTO
   :protection_level => 'Low',
   :svn_branch => 'trunk',
-  :responsible => 'vladan.krenek@tieto.com',
+  :responsible => 'jiri.klepek@tieto.com',
   :watchers => [],
   :max_age => 48
   },
