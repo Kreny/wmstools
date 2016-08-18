@@ -31,10 +31,14 @@ mysql -u root -p
 mysql> create database wmstools;
 mysql> create database wmstools_staging;
 mysql> grant usage on *.* to wmsuser@localhost identified by 'SalvatorDali01';
+mysql> grant usage on *.* to wmsuser@'%' identified by 'SalvatorDali01';
 mysql> grant all privileges on wmstools.* to wmsuser@localhost;
+mysql> grant all privileges on wmstools.* to wmsuser@'%';
 mysql> grant all privileges on wmstools_staging.* to wmsuser@localhost;
+mysql> grant all privileges on wmstools_staging.* to wmsuser@'%';
 ```
-make sure that <b>/etc/mysql/my.cnf</b> has line <b>bind-address = 127.0.0.1</b> commented otherwise MySQL will listen only on localhost!
+in /etc/myslq/my.cnf, change bind-address to all zeroes so it looks like this
+bind-address            = 0.0.0.0
 
 ### For Development
 `sudo apt-get install sqlite3 libsqlite3-dev ruby ruby-dev g++ subversion curl make mysql-server mysql-client libmysqlclient-dev libmysqlclient-dev libssl-dev`
