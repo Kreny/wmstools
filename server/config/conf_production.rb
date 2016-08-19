@@ -31,7 +31,7 @@ TEST_PACKAGES = [
   :suites => ['[TIT] REGRESSION TESTS 1'
   ]
   },
-
+]
 
 PERFORMANCE_TESTS = []
 
