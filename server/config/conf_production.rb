@@ -11,24 +11,52 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   :cron => '30 4 * * *',
   :suites_environments =>
   [
-  {:suite => '[TIT] REGRESSION TESTS 1', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] OBJECT EDITOR', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] ATTRIBUTE SEARCH', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] QUICK SEARCH', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] EXPLORER', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] ACCESS RIGHTS', :environment => 'TI_AUTO'},
   ]
 }
 
 # everything below this should be the same for both production and development
 
 TEST_SUITES = [
-  {:name => '[TIT] REGRESSION TESTS 1', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] OBJECT EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] ATTRIBUTE SEARCH', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] QUICK SEARCH', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] EXPLORER', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] ACCESS RIGHTS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
 ]
 
 TEST_PACKAGES = [
   {:name => 'FULL REGRESSION TEST',
   :suites => [
-  '[TIT] REGRESSION TESTS 1',
+  '[TIT] OBJECT EDITOR',
+  '[TIT] ATTRIBUTE SEARCH',
+  '[TIT] QUICK SEARCH',
+  '[TIT] EXPLORER',
+  '[TIT] ACCESS RIGHTS',
   ]
   },
-  {:name => '[TIT] REGRESSION TESTS 1',
-  :suites => ['[TIT] REGRESSION TESTS 1'
+  {:name => '[TIT] OBJECT EDITOR',
+  :suites => ['[TIT] OBJECT EDITOR'
+  ]
+  },
+  {:name => '[TIT] ATTRIBUTE SEARCH',
+  :suites => ['[TIT] ATTRIBUTE SEARCH'
+  ]
+  },
+  {:name => '[TIT] QUICK SEARCH',
+  :suites => ['[TIT] QUICK SEARCH'
+  ]
+  },
+  {:name => '[TIT] EXPLORER',
+  :suites => ['[TIT] EXPLORER'
+  ]
+  },
+  {:name => '[TIT] ACCESS RIGHTS',
+  :suites => ['[TIT] ACCESS RIGHTS'
   ]
   },
 ]
