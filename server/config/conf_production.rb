@@ -16,6 +16,7 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] QUICK SEARCH', :environment => 'TI_AUTO'},
   {:suite => '[TIT] EXPLORER', :environment => 'TI_AUTO'},
   {:suite => '[TIT] ACCESS RIGHTS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] DIGITIZING', :environment => 'TI_AUTO'},
   ]
 }
 
@@ -27,6 +28,7 @@ TEST_SUITES = [
   {:name => '[TIT] QUICK SEARCH', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] EXPLORER', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] ACCESS RIGHTS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] DIGITIZING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
 ]
 
 TEST_PACKAGES = [
@@ -37,6 +39,7 @@ TEST_PACKAGES = [
   '[TIT] QUICK SEARCH',
   '[TIT] EXPLORER',
   '[TIT] ACCESS RIGHTS',
+  '[TIT] DIGITIZING',
   ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -57,6 +60,10 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] ACCESS RIGHTS',
   :suites => ['[TIT] ACCESS RIGHTS'
+  ]
+  },
+  {:name => '[TIT] DIGITIZING',
+  :suites => ['[TIT] DIGITIZING'
   ]
   },
 ]
