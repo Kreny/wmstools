@@ -86,7 +86,7 @@ require_relative './rake/stage.rb'
 
 task(:default => [:deploy_staging_server, :deploy_staging_agent]) {}
 
-task(:deploy_production_stack => [:test, :deploy_production_server, :deploy_production_agents]) {}
+task(:deploy_production_stack => [:deploy_production_server, :deploy_production_agents]) {}
 
 task :test do
   `bundle install`
