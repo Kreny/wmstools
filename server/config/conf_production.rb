@@ -17,7 +17,9 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] EXPLORER', :environment => 'TI_AUTO'},
   {:suite => '[TIT] ACCESS RIGHTS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] DIGITIZING', :environment => 'TI_AUTO'},
-  ]
+  {:suite => '[TIT] BOOKMARKS AND PRESETS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] PLANS', :environment => 'TI_AUTO'},
+    ]
 }
 
 # everything below this should be the same for both production and development
@@ -29,7 +31,9 @@ TEST_SUITES = [
   {:name => '[TIT] EXPLORER', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] ACCESS RIGHTS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] DIGITIZING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
-]
+  {:name => '[TIT] BOOKMARKS AND PRESETS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] PLANS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+      ]
 
 TEST_PACKAGES = [
   {:name => 'FULL REGRESSION TEST',
@@ -40,7 +44,9 @@ TEST_PACKAGES = [
   '[TIT] EXPLORER',
   '[TIT] ACCESS RIGHTS',
   '[TIT] DIGITIZING',
-  ]
+  '[TIT] BOOKMARKS AND PRESETS',
+  '[TIT] PLANS',
+   ]
   },
   {:name => '[TIT] OBJECT EDITOR',
   :suites => ['[TIT] OBJECT EDITOR'
@@ -64,6 +70,14 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] DIGITIZING',
   :suites => ['[TIT] DIGITIZING'
+  ]
+  },
+  {:name => '[TIT] BOOKMARKS AND PRESETS',
+   :suites => ['[TIT] BOOKMARKS AND PRESETS'
+  ]
+  },
+  {:name => '[TIT] PLANS',
+   :suites => ['[TIT] PLANS'
   ]
   },
 ]
