@@ -19,6 +19,10 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] DIGITIZING', :environment => 'TI_AUTO'},
   {:suite => '[TIT] BOOKMARKS AND PRESETS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] PLANS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] IDENTIFY SETTINGS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] SCALES', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] RELAY EDITOR', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] EARTHING MEASUREMENT EDITOR', :environment => 'TI_AUTO'},
     ]
 }
 
@@ -33,6 +37,10 @@ TEST_SUITES = [
   {:name => '[TIT] DIGITIZING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] BOOKMARKS AND PRESETS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] PLANS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] IDENTIFY SETTINGS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] SCALES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] RELAY EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] EARTHING MEASUREMENT EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
       ]
 
 TEST_PACKAGES = [
@@ -46,6 +54,10 @@ TEST_PACKAGES = [
   '[TIT] DIGITIZING',
   '[TIT] BOOKMARKS AND PRESETS',
   '[TIT] PLANS',
+  '[TIT] IDENTIFY SETTINGS',
+  '[TIT] SCALES',
+  '[TIT] RELAY EDITOR',
+  '[TIT] EARTHING MEASUREMENT EDITOR',
    ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -80,6 +92,22 @@ TEST_PACKAGES = [
    :suites => ['[TIT] PLANS'
   ]
   },
+  {:name => '[TIT] IDENTIFY SETTINGS',
+  :suites => ['[TIT] IDENTIFY SETTINGS'
+  ]
+  },
+  {:name => '[TIT] SCALES',
+  :suites => ['[TIT] SCALES'
+  ]
+  },
+  {:name => '[TIT] RELAY EDITOR',
+  :suites => ['[TIT] RELAY EDITOR'
+  ]
+  },
+  {:name => '[TIT] EARTHING MEASUREMENT EDITOR',
+  :suites => ['[TIT] EARTHING MEASUREMENT EDITOR'
+  ]
+  },  
 ]
 
 PERFORMANCE_TESTS = []
