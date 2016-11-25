@@ -23,6 +23,7 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] SCALES', :environment => 'TI_AUTO'},
   {:suite => '[TIT] RELAY EDITOR', :environment => 'TI_AUTO'},
   {:suite => '[TIT] EARTHING MEASUREMENT EDITOR', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] PIPES', :environment => 'TI_AUTO'},  
     ]
 }
 
@@ -41,6 +42,7 @@ TEST_SUITES = [
   {:name => '[TIT] SCALES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] RELAY EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] EARTHING MEASUREMENT EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] PIPES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},  
       ]
 
 TEST_PACKAGES = [
@@ -58,6 +60,7 @@ TEST_PACKAGES = [
   '[TIT] SCALES',
   '[TIT] RELAY EDITOR',
   '[TIT] EARTHING MEASUREMENT EDITOR',
+  '[TIT] PIPES',
    ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -106,6 +109,10 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] EARTHING MEASUREMENT EDITOR',
   :suites => ['[TIT] EARTHING MEASUREMENT EDITOR'
+  ]
+  },
+  {:name => '[TIT] PIPES',
+   :suites => ['[TIT] PIPES'
   ]
   },  
 ]
