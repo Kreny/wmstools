@@ -32,8 +32,8 @@ class OperatingSystem
       command << " -s '#{@suite}'"
       command << " -c '#{@test_case}'" if test_case
       command << " -r #{SVN_HOME}/#{branch}/#{@project_file}"
-      command << " -f '#{@folder}'"
-      command << " -P screenshotPath='#{@folder}'"
+      command << " -f '/root/work/wmsTools/agent/#{@folder}'"
+      command << " -P screenshotPath='/root/work/wmsTools/agent/#{@folder}'"
     elsif @project_file_extension == 'jar'
       command << " -cp #{JAR_HOME}/#{branch}/target/#{@project_file}:#{JAR_HOME}/#{branch}/target/lib/*"
       command << ' com.tieto.test.ui.demo.Run'

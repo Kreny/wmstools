@@ -84,9 +84,9 @@ require_relative './rake/stage.rb'
 @production_agent_4.rack_file = 'agent.ru'
 @production_agent_4.quota = 4
 
-task(:default => [:test, :deploy_staging_server, :deploy_staging_agent]) {}
+task(:default => [:deploy_staging_server, :deploy_staging_agent]) {}
 
-task(:deploy_production_stack => [:test, :deploy_production_server, :deploy_production_agents]) {}
+task(:deploy_production_stack => [:deploy_production_server, :deploy_production_agents]) {}
 
 task :test do
   `bundle install`

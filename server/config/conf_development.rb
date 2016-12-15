@@ -12,27 +12,27 @@ PORT = 8088
 PERFORMANCE_TEST_RESULTS_PER_PAGE = 30
 
 FORTUM_SMOKE_TESTS_JOB = {
-  :cron => '*/20 16-23 * * *',
+  :cron => '0 2 * * *',
   :suites_environments =>
   [
-  {:suite => '[TIT] REGRESSION TESTS 1', :environment => 'FAT'},
+  {:suite => '[F] SMOKE TESTS', :environment => 'FAT'},
   ]
 }
 
 # everything below this should be the same for both production and development
 
 TEST_SUITES = [
-  {:name => '[TIT] REGRESSION TESTS 1', :type => 'Suite', :environments => ['FAT'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[F] SMOKE TESTS', :type => 'Suite', :environments => ['FAT'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Fortum_regression_krenevla.xml'},
 ]
 
 TEST_PACKAGES = [
   {:name => 'FULL REGRESSION TEST',
   :suites => [
-  '[TIT] REGRESSION TESTS 1',
+  '[F] SMOKE TESTS',
   ]
   },
-  {:name => '[TIT] REGRESSION TESTS 1',
-  :suites => ['[TIT] REGRESSION TESTS 1'
+  {:name => '[F] SMOKE TESTS',
+  :suites => ['[F] SMOKE TESTS'
   ]
   },
 ]

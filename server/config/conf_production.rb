@@ -65,35 +65,35 @@ FORTUM_TRUNK_REGRESSION_TESTS_JOB = {
 #  ]
 #}
 
-SKAGERAK_TRUNK_REGRESSION_TESTS_JOB = {
-  :cron => '30 4 * * *',
-  :suites_environments =>
-  [
-  {:suite => '[S] REGRESSION SET [daily]', :environment => 'DEV2SKA'},
-  {:suite => '[S] REGRESSION SET 1 [roll out]', :environment => 'DEV2SKA'},
-  {:suite => '[S] REGRESSION SET 2 [roll out]', :environment => 'DEV2SKA'},
-  {:suite => '[S] REGRESSION SET [daily_duringRollOut]', :environment => 'DEV2SKA'},
-  {:suite => '[S] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
-  {:suite => '[RM] WMS INTEGRATION', :environment => 'DEV2SKA'},
-  {:suite => '[RM] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
-  {:suite => '[S][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
-  ]
-}
+#SKAGERAK_TRUNK_REGRESSION_TESTS_JOB = {
+#  :cron => '30 4 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[S] REGRESSION SET [daily]', :environment => 'DEV2SKA'},
+#  {:suite => '[S] REGRESSION SET 1 [roll out]', :environment => 'DEV2SKA'},
+#  {:suite => '[S] REGRESSION SET 2 [roll out]', :environment => 'DEV2SKA'},
+#  {:suite => '[S] REGRESSION SET [daily_duringRollOut]', :environment => 'DEV2SKA'},
+#  {:suite => '[S] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
+#  {:suite => '[RM] WMS INTEGRATION', :environment => 'DEV2SKA'},
+#  {:suite => '[RM] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
+#  {:suite => '[S][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
+#  ]
+#}
 
-SKAGERAK_BRANCH_REGRESSION_TESTS_JOB = {
-  :cron => '30 5 * * *',
-  :suites_environments =>
-  [
-  {:suite => '[S] REGRESSION SET [daily]', :environment => 'DEV3SKA'},
-  {:suite => '[S] REGRESSION SET 1 [roll out]', :environment => 'DEV3SKA'},
-  {:suite => '[S] REGRESSION SET 2 [roll out]', :environment => 'DEV3SKA'},
-  {:suite => '[S] REGRESSION SET [daily_duringRollOut]', :environment => 'DEV3SKA'},
-  {:suite => '[S] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
-  {:suite => '[RM] WMS INTEGRATION', :environment => 'DEV3SKA'},
-  {:suite => '[RM] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
-  {:suite => '[S][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
-  ]
-}
+#SKAGERAK_BRANCH_REGRESSION_TESTS_JOB = {
+#  :cron => '30 5 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[S] REGRESSION SET [daily]', :environment => 'DEV3SKA'},
+#  {:suite => '[S] REGRESSION SET 1 [roll out]', :environment => 'DEV3SKA'},
+#  {:suite => '[S] REGRESSION SET 2 [roll out]', :environment => 'DEV3SKA'},
+#  {:suite => '[S] REGRESSION SET [daily_duringRollOut]', :environment => 'DEV3SKA'},
+#  {:suite => '[S] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
+#  {:suite => '[RM] WMS INTEGRATION', :environment => 'DEV3SKA'},
+#  {:suite => '[RM] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
+#  {:suite => '[S][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
+#  ]
+#}
 
 FORTUM_PERFORMANCE_TESTS_JOB = {
   :cron => '*/10 5,22 * * *',
@@ -120,36 +120,35 @@ FORTUM_INTEGRATION_TESTS_JOB = {
   ]
 }
 
-SKAGERAK_LOAD_TESTS_JOB = {
-  :cron => '0 7 * * *',
-  :suites_environments =>
-  [
-  {:suite => '[S] LOAD BALANCER', :environment => 'DEV2SKA'},
-  ]
-}
+#SKAGERAK_LOAD_TESTS_JOB = {
+#  :cron => '0 7 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[S] LOAD BALANCER', :environment => 'DEV2SKA'},
+#  ]
+#}
 
-SSN_TRUNK_REGRESSION_TESTS_JOB = {
-  :cron => '30 5 * * *',
-  :suites_environments =>
-  [
-  {:suite => '[SSN] REGRESSION TESTS', :environment => 'DEV7'},
-  {:suite => '[SSN] REGRESSION TESTS GUI 1', :environment => 'DEV7'},
-  {:suite => '[SSN][AM] REGRESSION TESTS', :environment => 'DEV7'},
-  {:suite => '[SSN][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV7'},
+#SSN_TRUNK_REGRESSION_TESTS_JOB = {
+#  :cron => '30 5 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[SSN] REGRESSION TESTS', :environment => 'DEV7'},
+#  {:suite => '[SSN] REGRESSION TESTS GUI 1', :environment => 'DEV7'},
+#  {:suite => '[SSN][AM] REGRESSION TESTS', :environment => 'DEV7'},
+#  {:suite => '[SSN][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV7'},
+#  ]
+#}
 
-  ]
-}
-
-SSN_BRANCH_REGRESSION_TESTS_JOB = {
-  :cron => '30 4 * * *',
-  :suites_environments =>
-  [
-  {:suite => '[SSN] REGRESSION TESTS', :environment => 'DEV6'},
-  {:suite => '[SSN] REGRESSION TESTS GUI 1', :environment => 'DEV6'},
-  {:suite => '[SSN][AM] REGRESSION TESTS', :environment => 'DEV6'},
-  {:suite => '[SSN][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV6'},
-  ]
-}
+#SSN_BRANCH_REGRESSION_TESTS_JOB = {
+#  :cron => '30 4 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[SSN] REGRESSION TESTS', :environment => 'DEV6'},
+#  {:suite => '[SSN] REGRESSION TESTS GUI 1', :environment => 'DEV6'},
+#  {:suite => '[SSN][AM] REGRESSION TESTS', :environment => 'DEV6'},
+#  {:suite => '[SSN][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV6'},
+#  ]
+#}
 
 # everything below this should be the same for both production and development
 
