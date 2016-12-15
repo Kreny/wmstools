@@ -35,10 +35,10 @@ VERSIONS = {:wms_trunk =>
   :watchers => [],
   :max_age => 48
   },
-  :wms_510 =>
-  {:name => '5.1.0', # FAT5
+  :wms_521 =>
+  {:name => '5.2.1', # FAT5
   :protection_level => 'High',
-  :svn_branch => 'branch/5.1.0',
+  :svn_branch => 'branch/5.2.1',
   :responsible => 'vladan.krenek@tieto.com',
   :watchers => [],
   :max_age => 48
