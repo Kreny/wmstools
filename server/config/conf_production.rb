@@ -150,6 +150,15 @@ FORTUM_INTEGRATION_TESTS_JOB = {
 #  ]
 #}
 
+HAFSLUND_SSN_TRUNK_REGRESSION_TESTS_JOB = {
+  :cron => '0 3 * * *',
+  :suites_environments =>
+  [
+  {:suite => '[H] REGRESSION TESTS 1', :environment => 'DEVHF02'},
+  {:suite => '[H] REGRESSION TESTS 2', :environment => 'DEVHF02'},
+  ]
+}
+
 # everything below this should be the same for both production and development
 
 TEST_SUITES = [
