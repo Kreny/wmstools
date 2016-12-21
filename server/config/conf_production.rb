@@ -20,7 +20,7 @@ FORTUM_SMOKE_TESTS_JOB = {
   {:suite => '[F] MAINTENANCE TESTS', :environment => 'FAT'},
   {:suite => '[F] SMOKE TESTS', :environment => 'FAT4'},
   {:suite => '[F] MAINTENANCE TESTS', :environment => 'FAT4'},
-  #{:suite => '[F] SMOKE TESTS', :environment => 'FAT5'},
+  {:suite => '[F] SMOKE TESTS', :environment => 'FAT5'},
   {:suite => '[F] SMOKE TESTS', :environment => 'FAT12'},
   ]
 }
@@ -151,7 +151,7 @@ FORTUM_INTEGRATION_TESTS_JOB = {
 #}
 
 HAFSLUND_SSN_TRUNK_REGRESSION_TESTS_JOB = {
-  :cron => '0 3 * * *',
+  :cron => '30 5 * * *',
   :suites_environments =>
   [
   {:suite => '[H] REGRESSION TESTS 1', :environment => 'DEVHF02'},
