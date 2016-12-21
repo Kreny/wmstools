@@ -19,10 +19,10 @@ VERSIONS = {:wms_trunk =>
   :watchers => [],
   :max_age => 48
   },
-  :wms_500fat12 =>
-  {:name => '5.0.xFAT12', # FAT12
+  :wms_520 =>
+  {:name => '5.2.0', # FAT12
   :protection_level => 'Low',
-  :svn_branch => 'branch/5.0.xFAT12',
+  :svn_branch => 'branch/5.2.0',
   :responsible => 'vladan.krenek@tieto.com',
   :watchers => [],
   :max_age => 48
