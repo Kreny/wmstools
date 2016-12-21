@@ -425,7 +425,7 @@ ENVIRONMENTS = [
   {:name => 'DEV6', :wms_version => '5.1.1'},
   {:name => 'DEV7', :wms_version => 'trunk'},
   {:name => 'DEVHF02', :wms_version => 'trunk'},
-  {:name => 'FAT12', :wms_version => '5.0.xFAT12'},
+  {:name => 'FAT12', :wms_version => '5.2.0'},
   {:name => 'INT_BRANCH', :wms_version => '5.1.2'},
   {:name => 'INT_TRUNK', :wms_version => 'trunk'},
 
