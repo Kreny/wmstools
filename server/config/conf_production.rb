@@ -180,9 +180,12 @@ TEST_SUITES = [
   {:name => '[F] MAINTENANCE TESTS', :type => 'Suite', :environments => ['FAT', 'FAT4'], :piazza => false, :priority => 140, :project_file => 'Fortum_regression_krenevla.xml'},
   {:name => '[F] PERFORMANCE TESTS', :type => 'Suite', :environments => ['FAT'], :piazza => false, :priority => 150, :project_file => 'Fortum_regression_krenevla.xml', :performance => true},
   {:name => '[F] INTEGRATION TESTS', :type => 'Suite', :environments => ['FAT', 'FAT4', 'FAT5', 'FAT12', 'INT_BRANCH', 'INT_TRUNK'], :piazza => true, :default_number_of_tests => 5, :priority => 151, :project_file => 'Fortum_regression_benkepet.xml'},
-  {:name => '[H] REGRESSION TESTS 1', :type => 'Suite', :environments => ['DEVHF02'], :piazza => true, :default_number_of_tests => 4, :priority => 210, :project_file => 'Hafslund_regression_krenevla.xml'},
-  {:name => '[H] REGRESSION TESTS 2', :type => 'Suite', :environments => ['DEVHF02'], :piazza => true, :default_number_of_tests => 10, :priority => 220, :project_file => 'Hafslund_regression_krenevla.xml'},
-  {:name => '[H] BUFFER TESTS', :type => 'Suite', :environments => ['DEVHF02'], :piazza => false, :default_number_of_tests => 2, :priority => 230, :project_file => 'Hafslund_regression_krenevla.xml', :buffer => true},
+  {:name => '[H] REGRESSION TESTS 1', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF01'], :piazza => true, :default_number_of_tests => 4, :priority => 210, :project_file => 'Hafslund_regression_krenevla.xml'},
+  {:name => '[H] REGRESSION TESTS 2', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF01'], :piazza => true, :default_number_of_tests => 10, :priority => 220, :project_file => 'Hafslund_regression_krenevla.xml'},
+  {:name => '[H] BUFFER TESTS', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF01'], :piazza => false, :default_number_of_tests => 2, :priority => 230, :project_file => 'Hafslund_regression_krenevla.xml', :buffer => true},
+  {:name => '[HE] REGRESSION TESTS 1', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF01', 'DEVHF03'], :piazza => true, :default_number_of_tests => 4, :priority => 370, :project_file => 'Hafslund_elhub_regression_benkepet.xml'},
+  {:name => '[HE] REGRESSION TESTS 2', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF01', 'DEVHF03'], :piazza => true, :default_number_of_tests => 4, :priority => 380, :project_file => 'Hafslund_elhub_regression_benkepet.xml'},
+  {:name => '[HE] BUFFER TESTS', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF01', 'DEVHF03'], :piazza => false, :default_number_of_tests => 2, :priority => 390, :project_file => 'Hafslund_elhub_regression_benkepet.xml', :buffer => true},
   {:name => '[S] REGRESSION SET [daily]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 42, :priority => 240, :project_file => 'Skagerak_daily_plohalen.xml'},
   {:name => '[S] REGRESSION SET 1 [roll out]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 15, :priority => 250, :project_file => 'Skagerak_rollOut_plohalen.xml'},
   {:name => '[S] REGRESSION SET 2 [roll out]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 35, :priority => 260, :project_file => 'Skagerak_rollOut_plohalen.xml'},
@@ -217,6 +220,8 @@ TEST_PACKAGES = [
   '[F] INTEGRATION TESTS',
   '[H] REGRESSION TESTS 1',
   '[H] REGRESSION TESTS 2',
+  '[HE] REGRESSION TESTS 1',
+  '[HE] REGRESSION TESTS 2',
   '[S] REGRESSION SET [daily]',
   '[S] REGRESSION SET 1 [roll out]',
   '[S] REGRESSION SET 2 [roll out]',
@@ -336,6 +341,18 @@ TEST_PACKAGES = [
   :suites => ['[H] REGRESSION TESTS 2'
   ]
   },
+  {:name => '[HE] REGRESSION TESTS 1',
+  :suites => ['[HE] REGRESSION TESTS 1'
+  ]
+  },
+  {:name => '[HE] REGRESSION TESTS 2',
+  :suites => ['[HE] REGRESSION TESTS 2'
+  ]
+  },
+  {:name => '[HE] BUFFER TESTS',
+  :suites => ['[HE] BUFFER TESTS'
+  ]
+  },
   {:name => '[H] BUFFER TESTS',
   :suites => ['[H] BUFFER TESTS'
   ]
@@ -387,7 +404,7 @@ PERFORMANCE_TESTS = [
 PIAZZA_SCREENS = [
   {:screen_number => 1, :environments => ['FAT']},
   {:screen_number => 2, :environments => ['FAT4']},
-  {:screen_number => 3, :environments => ['FAT5']},
+  {:screen_number => 3, :environments => ['DEVHF03']},
   {:screen_number => 4, :environments => ['DEVHF02']},
   {:screen_number => 5, :environments => ['DEV2SKA']},
   {:screen_number => 6, :environments => ['DEV3SKA']},
@@ -395,6 +412,7 @@ PIAZZA_SCREENS = [
   {:screen_number => 8, :environments => ['INT_BRANCH']},
   {:screen_number => 9, :environments => ['INT_TRUNK']},
   {:screen_number => 10, :environments => ['DEV6']},
+  {:screen_number => 11, :environments => ['FAT5']},
 ]
 
 DELIVERY_SITE_TYPES = [
@@ -424,7 +442,9 @@ ENVIRONMENTS = [
   {:name => 'DEV2SKA', :wms_version => 'trunk'},
   {:name => 'DEV6', :wms_version => '5.1.1'},
   {:name => 'DEV7', :wms_version => 'trunk'},
+  {:name => 'DEVHF01', :wms_version => '5.1.2'},
   {:name => 'DEVHF02', :wms_version => 'trunk'},
+  {:name => 'DEVHF03', :wms_version => '5.2.1'},
   {:name => 'FAT12', :wms_version => '5.2.0'},
   {:name => 'INT_BRANCH', :wms_version => '5.1.2'},
   {:name => 'INT_TRUNK', :wms_version => 'trunk'},
