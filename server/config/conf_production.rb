@@ -24,7 +24,12 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] RELAY EDITOR', :environment => 'TI_AUTO'},
   {:suite => '[TIT] EARTHING MEASUREMENT EDITOR', :environment => 'TI_AUTO'},
   {:suite => '[TIT] PIPES', :environment => 'TI_AUTO'},
-  {:suite => '[TIT] MEASUREMENT TOOL', :environment => 'TI_AUTO'},  
+  {:suite => '[TIT] MEASUREMENT TOOL', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] USER MANAGEMENT', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] MAP EXPORT', :environment => 'TI_AUTO'}, 
+  {:suite => '[TIT] ATTACHMENTS', :environment => 'TI_AUTO'}, 
+  {:suite => '[TIT] NETWORK CALCULATIONS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] VEGETATION CLEARING', :environment => 'TI_AUTO'},
     ]
 }
 
@@ -44,7 +49,13 @@ TEST_SUITES = [
   {:name => '[TIT] RELAY EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] EARTHING MEASUREMENT EDITOR', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] PIPES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
-  {:name => '[TIT] MEASUREMENT TOOL', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},   
+  {:name => '[TIT] MEASUREMENT TOOL', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},  
+  {:name => '[TIT] USER MANAGEMENT', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] MAP EXPORT', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] ATTACHMENTS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] NETWORK CALCULATIONS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] VEGETATION CLEARING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+     
       ]
 
 TEST_PACKAGES = [
@@ -64,6 +75,11 @@ TEST_PACKAGES = [
   '[TIT] EARTHING MEASUREMENT EDITOR',
   '[TIT] PIPES',
   '[TIT] MEASUREMENT TOOL',
+  '[TIT] USER MANAGEMENT',
+  '[TIT] MAP EXPORT',
+  '[TIT] ATTACHMENTS',
+  '[TIT] NETWORK CALCULATIONS',
+  '[TIT] VEGETATION CLEARING',
    ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -119,9 +135,30 @@ TEST_PACKAGES = [
   ]
   }, 
   {:name => '[TIT] MEASUREMENT TOOL',
-   :suites => ['[TIT] MEASUREMENT TOOL'
+  :suites => ['[TIT] MEASUREMENT TOOL'
   ]
-  }, 
+  },
+  {:name => '[TIT] USER MANAGEMENT',
+   :suites => ['[TIT] USER MANAGEMENT'
+  ]
+  },
+  {:name => '[TIT] MAP EXPORT',
+  :suites => ['[TIT] MAP EXPORT'
+  ]
+  },
+  {:name => '[TIT] ATTACHMENTS',
+  :suites => ['[TIT] ATTACHMENTS'
+  ]
+  },
+  {:name => '[TIT] NETWORK CALCULATIONS',
+  :suites => ['[TIT] NETWORK CALCULATIONS'
+  ]
+  },
+  {:name => '[TIT] VEGETATION CLEARING',
+  :suites => ['[TIT] VEGETATION CLEARING'
+  ]
+  },
+   
 ]
 
 PERFORMANCE_TESTS = []
