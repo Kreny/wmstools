@@ -27,7 +27,8 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MEASUREMENT TOOL', :environment => 'TI_AUTO'},
   {:suite => '[TIT] USER MANAGEMENT', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MAP EXPORT', :environment => 'TI_AUTO'}, 
-  {:suite => '[TIT] ATTACHMENTS', :environment => 'TI_AUTO'}, 
+  {:suite => '[TIT] ATTACHMENTS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] CATALOGUES', :environment => 'TI_AUTO'}, 
   {:suite => '[TIT] NETWORK CALCULATIONS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] VEGETATION CLEARING', :environment => 'TI_AUTO'},
     ]
@@ -53,6 +54,7 @@ TEST_SUITES = [
   {:name => '[TIT] USER MANAGEMENT', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] MAP EXPORT', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] ATTACHMENTS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[TIT] CATALOGUES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] NETWORK CALCULATIONS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] VEGETATION CLEARING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
      
@@ -78,6 +80,7 @@ TEST_PACKAGES = [
   '[TIT] USER MANAGEMENT',
   '[TIT] MAP EXPORT',
   '[TIT] ATTACHMENTS',
+  '[TIT] CATALOGUES',
   '[TIT] NETWORK CALCULATIONS',
   '[TIT] VEGETATION CLEARING',
    ]
@@ -148,6 +151,10 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] ATTACHMENTS',
   :suites => ['[TIT] ATTACHMENTS'
+  ]
+  },
+  {:name => '[TIT] CATALOGUES',
+  :suites => ['[TIT] CATALOGUES'
   ]
   },
   {:name => '[TIT] NETWORK CALCULATIONS',
