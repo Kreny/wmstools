@@ -107,7 +107,7 @@ module HelpersPiazza
         :environment => environment,
         :test_suite => suite,
         :order => [:started_at.asc]
-    ).select { |te| te.revision.match('\d{5}') if te.revision }.last
+    ).select { |te| te.revision.match('\d{9}') if te.revision }.last
     '#' + last.revision if last
   end
 

@@ -9,7 +9,7 @@ JIRA_USERNAME = 'requeste'
 JIRA_PASSWORD = 'Ostrava123456'
 FISHEYE_BASE_PATH = 'http://192.176.148.85:8060/browse/WMS-SVN' # don't put slash at the end
 SVN_TIME_OUT = 10 #seconds
-BUFFER_TEST_MAX_FAILED = 5
+BUFFER_TEST_MAX_FAILED = 15
 
 VERSIONS = {:wms_trunk =>
   {:name => 'trunk', # TI_AUTO
