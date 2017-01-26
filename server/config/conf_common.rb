@@ -51,4 +51,12 @@ VERSIONS = {:wms_trunk =>
   :watchers => [],
   :max_age => 48
   },
+  :wms_521 =>
+  {:name => '5.2.1', # DEVHF03
+  :protection_level => 'High',
+  :svn_branch => 'trunk',
+  :responsible => 'vladan.krenek@tieto.com',
+  :watchers => [],
+  :max_age => 48
+  },
 }
