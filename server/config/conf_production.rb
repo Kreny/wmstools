@@ -431,7 +431,8 @@ DELIVERY_SITE_TYPES = [
   {:id => '[H] AMS Z32 1c', :name => '[H] AMS Z32 1c', :environments => ['DEVHF02'], :test_suite_name => '[H] BUFFER TESTS', :quota => 100},
   {:id => '[H] AMM Z31 1c', :name => '[H] AMM Z31 1c', :environments => ['DEVHF02'], :test_suite_name => '[H] BUFFER TESTS', :quota => 100},
   {:id => '[H] AMM Z32 1c', :name => '[H] AMM Z32 1c', :environments => ['DEVHF02'], :test_suite_name => '[H] BUFFER TESTS', :quota => 100},
-  {:id => '[H] AMM Z32 2c', :name => '[H] AMM Z32 2c', :environments => ['DEVHF02'], :test_suite_name => '[H] BUFFER TESTS', :quota => 100},  
+  {:id => '[H] AMM Z32 2c', :name => '[H] AMM Z32 2c', :environments => ['DEVHF02'], :test_suite_name => '[H] BUFFER TESTS', :quota => 100},
+  {:id => '[HE] AMM Z31 1c', :name => '[HE] AMM Z31 1c', :environments => ['DEVHF03'], :test_suite_name => '[HE] BUFFER TESTS', :quota => 100},  
 ]
 
 ENVIRONMENTS = [
