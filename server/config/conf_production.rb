@@ -113,11 +113,11 @@ TEST_PACKAGES = [
   ]
   },
   {:name => '[TIT] BOOKMARKS AND PRESETS',
-   :suites => ['[TIT] BOOKMARKS AND PRESETS'
+  :suites => ['[TIT] BOOKMARKS AND PRESETS'
   ]
   },
   {:name => '[TIT] PLANS',
-   :suites => ['[TIT] PLANS'
+  :suites => ['[TIT] PLANS'
   ]
   },
   {:name => '[TIT] IDENTIFY SETTINGS',
