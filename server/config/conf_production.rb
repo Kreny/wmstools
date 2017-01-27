@@ -137,7 +137,7 @@ TEST_PACKAGES = [
   ]
   },
   {:name => '[TIT] PIPES',
-   :suites => ['[TIT] PIPES'
+  :suites => ['[TIT] PIPES'
   ]
   }, 
   {:name => '[TIT] MEASUREMENT TOOL',
