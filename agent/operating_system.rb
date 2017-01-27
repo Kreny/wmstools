@@ -12,7 +12,7 @@ class OperatingSystem
   PERFORMANCE_TEST_MATCHING_REGEXP = /\[(PERF\d*.?)\]\[(\d*)\]/
   START_STRING = '[SoapUITestCaseRunner] Running SoapUI tests in project'
   STOP_STRING = '[SoapUITestCaseRunner] Finished running SoapUI tests'
-  REVISION_STRING = 'WMS build #\d{5}'
+  REVISION_STRING = 'TITANIUM build #\d{9}'
 
   def project_file=(file)
     @project_file = file
@@ -183,7 +183,7 @@ class OperatingSystem
 
   def scan_for_svn_revision(line, test_execution)
     if line.match(REVISION_STRING)
-      test_execution.revision = line.match(REVISION_STRING)[0][-5..-1]
+      test_execution.revision = line.match(REVISION_STRING)[0][-9..-1]
       test_execution.save
     end
   end
