@@ -3,7 +3,7 @@ module HelpersTestCaseOverview
   def get_newest_revision(environment)
     if environment.respond_to?(:name)
       executions = TestExecution.all(:environment_name => environment.name).collect do |e|
-        e if e.revision =~ /\d{9,7}/ && e.status != 'Running'
+        e if e.revision =~ /\.*/ && e.status != 'Running'
       end.compact
       if executions.count > 0
         executions.sort do |a, b|
