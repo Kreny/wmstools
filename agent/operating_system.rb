@@ -183,7 +183,7 @@ class OperatingSystem
 
   def scan_for_svn_revision(line, test_execution)
     if line.match(REVISION_STRING)
-      test_execution.revision = line.match(REVISION_STRING)[0][-9..-1]
+      test_execution.revision = line.match(REVISION_STRING)[0][-12..-1]
       test_execution.save
     end
   end
