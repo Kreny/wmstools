@@ -26,7 +26,6 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] CATALOGUES', :environment => 'TI_AUTO'}, 
   {:suite => '[TIT] NETWORK CALCULATIONS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] VEGETATION CLEARING', :environment => 'TI_AUTO'},
-  {:suite => '[TIT] MAINTENANCE QUERIES', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MAINTENANCE HISTORY', :environment => 'TI_AUTO'},  
   {:suite => '[TIT] OTHER', :environment => 'TI_AUTO'},    
     ]
@@ -49,8 +48,7 @@ TEST_SUITES = [
   {:name => '[TIT] MAP EXPORT', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] CATALOGUES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] NETWORK CALCULATIONS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
-  {:name => '[TIT] VEGETATION CLEARING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
-  {:name => '[TIT] MAINTENANCE QUERIES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
+  {:name => '[TIT] VEGETATION CLEARING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MAINTENANCE HISTORY', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] OTHER', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
      
@@ -74,7 +72,6 @@ TEST_PACKAGES = [
   '[TIT] CATALOGUES',
   '[TIT] NETWORK CALCULATIONS',
   '[TIT] VEGETATION CLEARING',
-  '[TIT] MAINTENANCE QUERIES',
   '[TIT] MAINTENANCE HISTORY',
   '[TIT] OTHER',  
    ]
@@ -137,10 +134,6 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] VEGETATION CLEARING',
   :suites => ['[TIT] VEGETATION CLEARING'
-  ]
-  },
-  {:name => '[TIT] MAINTENANCE QUERIES',
-  :suites => ['[TIT] MAINTENANCE QUERIES'
   ]
   },
   {:name => '[TIT] MAINTENANCE HISTORY',
