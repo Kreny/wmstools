@@ -27,7 +27,9 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] NETWORK CALCULATIONS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] VEGETATION CLEARING', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MAINTENANCE HISTORY', :environment => 'TI_AUTO'},  
-  {:suite => '[TIT] OTHER', :environment => 'TI_AUTO'},    
+  {:suite => '[TIT] OTHER', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] MAINTENANCE WORK TASKS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},        
     ]
 }
 
@@ -51,6 +53,8 @@ TEST_SUITES = [
   {:name => '[TIT] VEGETATION CLEARING', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MAINTENANCE HISTORY', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] OTHER', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
+  {:name => '[TIT] MAINTENANCE WORK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
+  {:name => '[TIT] MAINTENANCE CHECK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
      
       ]
 
@@ -73,7 +77,9 @@ TEST_PACKAGES = [
   '[TIT] NETWORK CALCULATIONS',
   '[TIT] VEGETATION CLEARING',
   '[TIT] MAINTENANCE HISTORY',
-  '[TIT] OTHER',  
+  '[TIT] OTHER',
+  '[TIT] MAINTENANCE WORK TASKS',  
+  '[TIT] MAINTENANCE CHECK TASKS',
    ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -142,6 +148,14 @@ TEST_PACKAGES = [
   },    
   {:name => '[TIT] OTHER',
   :suites => ['[TIT] OTHER'
+  ]
+  },
+  {:name => '[TIT] MAINTENANCE WORK TASKS',
+  :suites => ['[TIT] MAINTENANCE WORK TASKS'
+  ]
+  },
+  {:name => '[TIT] MAINTENANCE CHECK TASKS',
+  :suites => ['[TIT] MAINTENANCE CHECK TASKS'
   ]
   },
 ]
