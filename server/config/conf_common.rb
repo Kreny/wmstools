@@ -12,7 +12,7 @@ SVN_TIME_OUT = 10 #seconds
 BUFFER_TEST_MAX_FAILED = 5
 
 VERSIONS = {:wms_trunk =>
-  {:name => 'trunk', # FAT,PROMETERA,DEV9PROM,DEV3SKA,DEV7
+  {:name => 'trunk', # FAT,PROMETERA,DEV9PROM,DEV3SKA,DEV7 DEVHF03 DEVHF01 projects
   :protection_level => 'Low',
   :svn_branch => 'trunk',
   :responsible => 'vladan.krenek@tieto.com',
