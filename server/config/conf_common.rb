@@ -12,7 +12,7 @@ SVN_TIME_OUT = 10 #seconds
 BUFFER_TEST_MAX_FAILED = 5
 
 VERSIONS = {:wms_trunk =>
-  {:name => 'trunk', # FAT,PROMETERA,DEV9PROM,DEV3SKA,DEV7 DEVHF03 DEVHF01 projects
+  {:name => 'trunk', # FAT1,PROMETERA,DEV9PROM,DEV3SKA,DEV7 DEVHF03 DEVHF01 projects
   :protection_level => 'Low',
   :svn_branch => 'trunk',
   :responsible => 'vladan.krenek@tieto.com',
@@ -28,7 +28,7 @@ VERSIONS = {:wms_trunk =>
   :max_age => 48
   },
   :wms_172 =>
-  {:name => '17.2', # FAT4 DEV4
+  {:name => '17.2', # FAT4 DEV4 DEVHF03
   :protection_level => 'Medium',
   :svn_branch => 'branch/17.2',
   :responsible => 'vladan.krenek@tieto.com',
@@ -36,7 +36,7 @@ VERSIONS = {:wms_trunk =>
   :max_age => 48
   },
   :wms_171 =>
-  {:name => '17.1', # FAT5 DEVHF03 DEVHF01
+  {:name => '17.1', # FAT5 DEVHF01
   :protection_level => 'High',
   :svn_branch => 'branch/17.1',
   :responsible => 'vladan.krenek@tieto.com',

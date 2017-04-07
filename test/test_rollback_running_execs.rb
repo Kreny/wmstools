@@ -84,7 +84,7 @@ class RollbackRunningExecsTest < Test::Unit::TestCase
     test_execution.exit_code = 1
     test_execution.stderr = 'stderr'
     test_execution.output_zip_base64 = 'zip'
-    test_execution.environment = Environment.get('FAT')
+    test_execution.environment = Environment.get('FAT1')
     test_execution.test_suite = TestSuite.get('[F] SMOKE TESTS')
     test_execution.delivery_site_type = DeliverySiteType.get('type1')
     test_execution.save
@@ -92,7 +92,7 @@ class RollbackRunningExecsTest < Test::Unit::TestCase
     performance_measurement_point = PerformanceMeasurementPoint.new
     performance_measurement_point.id = PerformanceMeasurementPoint.all.count + 1
     performance_measurement_point.name = 'one'
-    performance_measurement_point.test_suite_name = 'FAT'
+    performance_measurement_point.test_suite_name = 'FAT1'
     performance_measurement_point.save
 
     performance_measurement = PerformanceMeasurement.new

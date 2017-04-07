@@ -10,12 +10,12 @@ class RunnerBasicTest < Test::Unit::TestCase
   def setup
     @data = {'for' => 'radovan.fekec@tieto.com',
              'test_suite_name' => 'FULL REGRESSION TEST',
-             'environment' => 'FAT'
+             'environment' => 'FAT1'
     }
 
     @te = TestExecution.new
     @te.test_suite_name = "SMOKE TEST"
-    @te.environment_name ="FAT"
+    @te.environment_name ="FAT1"
     @te.for = "radovan.fekec@tieto.com"
     @te.status = 'Pending'
     @te.enqueued_at = DateTime.now
@@ -85,7 +85,7 @@ class RunnerBasicTest < Test::Unit::TestCase
   end
 
   def test_getting_packages
-    post '/test_runner/test_suites', {'environment' => 'FAT', 'scope' => 'package'}
+    post '/test_runner/test_suites', {'environment' => 'FAT1', 'scope' => 'package'}
     assert_equal([{'value' => 'FULL REGRESSION TEST'}].to_json, last_response.body)
   end
 

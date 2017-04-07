@@ -12,11 +12,11 @@ class DeliverySiteTest < Test::Unit::TestCase
           :id => 4 - count,
           :expired => false,
           :delivery_site_type => DeliverySiteType.get('type1'),
-          :environment => Environment.get('FAT')
+          :environment => Environment.get('FAT1')
       )
     end
 
-    delivery_site, status, reason = DeliverySite.get_one('type1', 'FAT')
+    delivery_site, status, reason = DeliverySite.get_one('type1', 'FAT1')
 
     assert_equal('4', delivery_site.id)
   end
@@ -27,7 +27,7 @@ class DeliverySiteTest < Test::Unit::TestCase
           :id => count,
           :expired => false,
           :delivery_site_type => DeliverySiteType.get('type1'),
-          :environment => Environment.get('FAT')
+          :environment => Environment.get('FAT1')
       )
     end
 
@@ -46,7 +46,7 @@ class DeliverySiteTest < Test::Unit::TestCase
         1,
         TestExecution.all(
             :delivery_site_type => DeliverySiteType.get('type1'),
-            :environment => Environment.get('FAT'),
+            :environment => Environment.get('FAT1'),
             :test_suite => TestSuite.get('[F] BUFFER TESTS')
 
         ).count
@@ -59,7 +59,7 @@ class DeliverySiteTest < Test::Unit::TestCase
           :id => count,
           :expired => false,
           :delivery_site_type => DeliverySiteType.get('type2'),
-          :environment => Environment.get('FAT')
+          :environment => Environment.get('FAT1')
       )
     end
 
@@ -69,7 +69,7 @@ class DeliverySiteTest < Test::Unit::TestCase
         0,
         TestExecution.all(
             :delivery_site_type => DeliverySiteType.get('type2'),
-            :environment => Environment.get('FAT'),
+            :environment => Environment.get('FAT1'),
             :test_suite => TestSuite.get('[F] BUFFER TESTS')
 
         ).count
@@ -85,7 +85,7 @@ class DeliverySiteTest < Test::Unit::TestCase
     BUFFER_TEST_MAX_FAILED.times do
       TestExecution.create(
           :test_suite_name => '[F] BUFFER TESTS',
-          :environment_name => 'FAT',
+          :environment_name => 'FAT1',
           :delivery_site_type_id => 'type1',
           :status => 'Finished',
           :result => 'FAILED'
@@ -95,7 +95,7 @@ class DeliverySiteTest < Test::Unit::TestCase
     DeliverySite.check_storage
     assert_equal(5, TestExecution.all(
                       :test_suite_name => '[F] BUFFER TESTS',
-                      :environment_name => 'FAT',
+                      :environment_name => 'FAT1',
                       :delivery_site_type_id => 'type1'
                   ).count
     )
@@ -105,7 +105,7 @@ class DeliverySiteTest < Test::Unit::TestCase
     BUFFER_TEST_MAX_FAILED.times do
       TestExecution.create(
           :test_suite_name => '[F] BUFFER TESTS',
-          :environment_name => 'FAT',
+          :environment_name => 'FAT1',
           :delivery_site_type_id => 'type1',
           :status => 'Finished',
           :result => 'No Result'
@@ -115,7 +115,7 @@ class DeliverySiteTest < Test::Unit::TestCase
     DeliverySite.check_storage
     assert_equal(5, TestExecution.all(
                       :test_suite_name => '[F] BUFFER TESTS',
-                      :environment_name => 'FAT',
+                      :environment_name => 'FAT1',
                       :delivery_site_type_id => 'type1'
                   ).count
     )

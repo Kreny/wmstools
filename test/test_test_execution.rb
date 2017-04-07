@@ -14,7 +14,7 @@ class TestExecutionTest < Test::Unit::TestCase
   def test_setting_status_finished
     test_execution = TestExecution.new
     test_execution.test_suite_name = '[F] SMOKE TESTS'
-    test_execution.environment_name = 'FAT'
+    test_execution.environment_name = 'FAT1'
     test_execution.for = 'TEST'
     test_execution.agent = 'uw001685'
     test_execution.enqueue
@@ -23,7 +23,7 @@ class TestExecutionTest < Test::Unit::TestCase
     @os.expects(:project_file=).returns('WMS.xml')
     @os.expects(:suite=).returns('[F] SMOKE TESTS')
     @os.expects(:branch=).returns('trunk')
-    @os.expects(:environment=).returns('FAT')
+    @os.expects(:environment=).returns('FAT1')
     @os.expects(:run, test_execution).returns('Finished')
     @os.expects(:exit_status, test_execution).returns(0)
     @os.expects(:stderr).at_least_once.returns('')
@@ -38,14 +38,14 @@ class TestExecutionTest < Test::Unit::TestCase
     # enqueue 1 execution, dequeue it and the move it to a foreign agent
     test_execution = TestExecution.new
     test_execution.test_suite_name = '[F] SMOKE TESTS'
-    test_execution.environment_name = 'FAT'
+    test_execution.environment_name = 'FAT1'
     test_execution.for = 'TEST'
     test_execution.enqueue
 
     @os.expects(:folder=).returns(test_execution.id)
     @os.expects(:project_file=).returns('WMS.xml')
     @os.expects(:suite=).returns('[F] SMOKE TESTS')
-    @os.expects(:environment=).returns('FAT')
+    @os.expects(:environment=).returns('FAT1')
     @os.expects(:branch=).returns('trunk')
     @os.expects(:run, test_execution).returns('Running')
     @os.expects(:exit_status).returns(0)
@@ -65,7 +65,7 @@ class TestExecutionTest < Test::Unit::TestCase
     5.times do
       test_execution = TestExecution.new
       test_execution.test_suite_name = '[F] SMOKE TESTS'
-      test_execution.environment_name = 'FAT'
+      test_execution.environment_name = 'FAT1'
       test_execution.for = 'TEST'
       test_execution.enqueue
 
@@ -73,7 +73,7 @@ class TestExecutionTest < Test::Unit::TestCase
       @os.expects(:project_file=).returns('WMS.xml')
       @os.expects(:suite=).returns('[F] SMOKE TESTS')
       @os.expects(:branch=).returns('trunk')
-      @os.expects(:environment=).returns('FAT')
+      @os.expects(:environment=).returns('FAT1')
       @os.expects(:run, test_execution).returns('Running')
       @os.expects(:exit_status).returns(0)
       @os.expects(:stderr).returns('')
@@ -85,7 +85,7 @@ class TestExecutionTest < Test::Unit::TestCase
     # enqueue 1 more execution and attempt to dequeue it on this agent - it should not dequeue as quota for this agent has already been reached
     test_execution = TestExecution.new
     test_execution.test_suite_name = '[F] SMOKE TESTS'
-    test_execution.environment_name = 'FAT'
+    test_execution.environment_name = 'FAT1'
     test_execution.for = 'TEST'
     test_execution.enqueue
 
@@ -98,7 +98,7 @@ class TestExecutionTest < Test::Unit::TestCase
   def test_not_dequeuing_when_preparing
     test_execution = TestExecution.new
     test_execution.test_suite_name = '[F] SMOKE TESTS'
-    test_execution.environment_name = 'FAT'
+    test_execution.environment_name = 'FAT1'
     test_execution.agent = THIS_AGENT_ID
     test_execution.for = 'TEST'
     test_execution.enqueue

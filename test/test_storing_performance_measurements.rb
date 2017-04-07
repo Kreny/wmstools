@@ -24,7 +24,7 @@ class StoringPerformanceMeasurementsTest < Test::Unit::TestCase
 
 
     @sut = TestExecution.new
-    @sut.environment_name = 'FAT'
+    @sut.environment_name = 'FAT1'
     @sut.for = 'tomas.dinkov@tieto.com'
     @sut.test_suite_name = '[F] PERFORMANCE TESTS'
     @sut.id = 1

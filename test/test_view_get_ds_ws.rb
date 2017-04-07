@@ -14,42 +14,42 @@ class TestViewPerformance < Test::Unit::TestCase
                     :id => '123456789',
                     :delivery_site_type_id => 'type4manual',
                     :expired => false,
-                    :environment_name => 'FAT'
+                    :environment_name => 'FAT1'
     )
   end
 
   def test_getting_ds
-    post '/get_ds_ws', {'type' => 'type4manual', 'environment' => 'FAT'}
+    post '/get_ds_ws', {'type' => 'type4manual', 'environment' => 'FAT1'}
     assert_equal({
                      :status => 'OK',
                      :reason => '',
                      :ds_id => '123456789',
                      :ds_type => 'type4manual',
-                     :environment => 'FAT'
+                     :environment => 'FAT1'
 
     }.to_json, last_response.body)
   end
 
   def test_out_of_stock
     @ds.expire
-    post '/get_ds_ws', {'type' => 'type4manual', 'environment' => 'FAT'}
+    post '/get_ds_ws', {'type' => 'type4manual', 'environment' => 'FAT1'}
     assert_equal({
                      :status => 'FAILED',
-                     :reason => "No delivery sites of type 'type4manual' for 'FAT' are in the stock. Please, contact administrator.",
+                     :reason => "No delivery sites of type 'type4manual' for 'FAT1' are in the stock. Please, contact administrator.",
                      :ds_id => '',
                      :ds_type => 'type4manual',
-                     :environment => 'FAT',
+                     :environment => 'FAT1',
                  }.to_json, last_response.body)
   end
 
   def test_invalid_ds_type
-    post '/get_ds_ws', {'type' => 'non_existent', 'environment' => 'FAT'}
+    post '/get_ds_ws', {'type' => 'non_existent', 'environment' => 'FAT1'}
     assert_equal({
                      :status => 'FAILED',
-                     :reason => "No delivery sites of type 'non_existent' for 'FAT' are in the stock. Please, contact administrator.",
+                     :reason => "No delivery sites of type 'non_existent' for 'FAT1' are in the stock. Please, contact administrator.",
                      :ds_id => '',
                      :ds_type => 'non_existent',
-                     :environment => 'FAT',
+                     :environment => 'FAT1',
                  }.to_json, last_response.body)
   end
 

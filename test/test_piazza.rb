@@ -4,7 +4,7 @@ class PiazzaTest < Test::Unit::TestCase
   def setup
     @piazza_data = {:environments =>
                         [{:branch => 'trunk',
-                          :name => 'FAT',
+                          :name => 'FAT1',
                           :result => 'Failure',
                           :running? => true,
                           :suites =>
@@ -77,7 +77,7 @@ class PiazzaTest < Test::Unit::TestCase
   def test_getting_piazza_data
     TestExecution.destroy!
     TestExecution.create(
-        :environment_name => 'FAT',
+        :environment_name => 'FAT1',
         :test_suite_name => '[F] SMOKE TESTS',
         :status => 'Finished',
         :result => 'FAILED',
@@ -87,7 +87,7 @@ class PiazzaTest < Test::Unit::TestCase
 
     )
     te = TestExecution.create(
-        :environment_name => 'FAT',
+        :environment_name => 'FAT1',
         :test_suite_name => '[F] SMOKE TESTS',
         :status => 'Running',
         :result => 'FAILED',

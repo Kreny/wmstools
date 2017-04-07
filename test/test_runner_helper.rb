@@ -6,7 +6,7 @@ class TestRunnerHelperTest < Test::Unit::TestCase
   def setup
     @test_execution = TestExecution.new
     @test_execution.test_suite_name = '[F] SMOKE TESTS'
-    @test_execution.environment_name = 'FAT'
+    @test_execution.environment_name = 'FAT1'
     @test_execution.for = 'TEST'
     @test_execution.agent = 'uw001685'
     @test_execution.enqueue

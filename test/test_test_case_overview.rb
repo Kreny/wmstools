@@ -9,7 +9,7 @@ class TestCaseOverviewTest < Test::Unit::TestCase
     create_test_cases
     connect_environments_with_test_cases
     create_test_case_results
-    @fat = Environment.get('FAT')
+    @fat = Environment.get('FAT1')
     @fat4 = Environment.get('FAT4')
     @prometera = Environment.get('PROMETERA')
   end
@@ -23,9 +23,9 @@ class TestCaseOverviewTest < Test::Unit::TestCase
     e6 = TestExecution.new
     e1.environment_name, e1.test_suite_name, e1.revision, e1.status = 'FAT4', '[F] WEB SERVICE TESTS', '42614', 'Finished'
     e2.environment_name, e2.test_suite_name, e2.revision, e2.status = 'FAT4', '[F] WEB SERVICE TESTS', '42613', 'Finished'
-    e3.environment_name, e3.test_suite_name, e3.revision, e3.status = 'FAT', '[F] WEB SERVICE TESTS', '42612', 'Failed'
-    e4.environment_name, e4.test_suite_name, e4.revision, e4.status = 'FAT', '[F] WEB SERVICE TESTS', '42613', 'Failed'
-    e5.environment_name, e5.test_suite_name, e5.revision, e5.status = 'FAT', '[F] WEB SERVICE TESTS', '42614', 'Running'
+    e3.environment_name, e3.test_suite_name, e3.revision, e3.status = 'FAT1', '[F] WEB SERVICE TESTS', '42612', 'Failed'
+    e4.environment_name, e4.test_suite_name, e4.revision, e4.status = 'FAT1', '[F] WEB SERVICE TESTS', '42613', 'Failed'
+    e5.environment_name, e5.test_suite_name, e5.revision, e5.status = 'FAT1', '[F] WEB SERVICE TESTS', '42614', 'Running'
     e6.environment_name, e6.test_suite_name, e6.revision, e6.status = 'FAT4', '[F] SMOKE TESTS', '42614', 'Finished'
     begin
       e1.save
@@ -94,18 +94,18 @@ class TestCaseOverviewTest < Test::Unit::TestCase
 
   def connect_environments_with_test_cases
     tc1 = TestCase.get('[TC001]')
-    tc1.environments << Environment.get('FAT')
+    tc1.environments << Environment.get('FAT1')
     tc1.environments << Environment.get('FAT4')
     tc1.save
 
     tc2 = TestCase.get('[TC002]')
-    tc2.environments << Environment.get('FAT')
+    tc2.environments << Environment.get('FAT1')
     tc2.environments << Environment.get('FAT4')
     tc2.save
   end
 
   def test_getting_newest_revision
-    assert_equal('42613', get_newest_revision(@fat))
+    assert_equal('42613', get_newest_revision(@fat1))
     assert_equal('42614', get_newest_revision(@fat4))
   end
 
@@ -124,7 +124,7 @@ class TestCaseOverviewTest < Test::Unit::TestCase
   end
 
   def test_getting_no_result
-    test_cases = get_test_cases(@fat, '42614')
+    test_cases = get_test_cases(@fat1, '42614')
     assert_equal('NO RESULT', test_cases[0].tco_result)
   end
 

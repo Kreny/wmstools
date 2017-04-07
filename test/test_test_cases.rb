@@ -35,7 +35,7 @@ class TestCasesTest < Test::Unit::TestCase
 
     @te = TestExecution.new
     @te.test_suite_name = '[F] SMOKE TESTS'
-    @te.environment_name = 'FAT'
+    @te.environment_name = 'FAT1'
     @te.for = 'TEST'
     @te.revision = '41597'
     @te.enqueue
@@ -56,7 +56,7 @@ class TestCasesTest < Test::Unit::TestCase
 
   def test_associating_test_case_with_environments
     @stdout.each_line {|line|@os.send(:scan_for_test_cases, line, @te)}
-    assert_equal('FAT', TestCase.all.first.environments.first.name)
+    assert_equal('FAT1', TestCase.all.first.environments.first.name)
 
     @te = TestExecution.new
     @te.test_suite_name = '[F] SMOKE TESTS'
@@ -66,7 +66,7 @@ class TestCasesTest < Test::Unit::TestCase
     @te.enqueue
 
     @stdout.each_line {|line|@os.send(:scan_for_test_cases, line, @te)}
-    assert_equal(['FAT', 'FAT4'], TestCase.all.last.environments.collect {|a|a.name})
+    assert_equal(['FAT1', 'FAT4'], TestCase.all.last.environments.collect {|a|a.name})
   end
 
   def test_processing_existing_test_cases

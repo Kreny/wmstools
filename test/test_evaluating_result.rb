@@ -3,7 +3,7 @@ require_relative('setup_tests')
 class EvaluateResultTest < Test::Unit::TestCase
   def setup
     @te = TestExecution.new
-    @te.environment_name = 'FAT'
+    @te.environment_name = 'FAT1'
     @te.test_suite_name = '[F] SMOKE TESTS'
     @te.save
 

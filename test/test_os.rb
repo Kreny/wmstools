@@ -114,7 +114,7 @@ class TestOs < Test::Unit::TestCase
     @os.folder, @os.branch, @os.project_file, @os.suite = 'output', 'trunk', 'WMS.xml', '[F] LOAD TEST'
 
     @te = TestExecution.new
-    @te.environment_name = 'FAT'
+    @te.environment_name = 'FAT1'
     @te.test_suite_name = '[F] SMOKE TESTS'
 
     @te.save

@@ -141,7 +141,7 @@ class Utils
   end
 
   def upgrade_delivery_sites_environments
-    DeliverySite.all(:environment_name => '').each { |ds| ds.update(:environment_name => 'FAT') }
+    DeliverySite.all(:environment_name => '').each { |ds| ds.update(:environment_name => 'FAT1') }
   end
 
   def to_link(prefix, name)
