@@ -29,7 +29,8 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MAINTENANCE HISTORY', :environment => 'TI_AUTO'},  
   {:suite => '[TIT] OTHER', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MAINTENANCE WORK TASKS', :environment => 'TI_AUTO'},
-  {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},        
+  {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},
+  {:suite => '[TIT] MULTILINE MODIFICATION', :environment => 'TI_AUTO'},        
     ]
 }
 
@@ -55,6 +56,7 @@ TEST_SUITES = [
   {:name => '[TIT] OTHER', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MAINTENANCE WORK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MAINTENANCE CHECK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
+  {:name => '[TIT] MULTILINE MODIFICATION', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
      
       ]
 
@@ -80,6 +82,7 @@ TEST_PACKAGES = [
   '[TIT] OTHER',
   '[TIT] MAINTENANCE WORK TASKS',  
   '[TIT] MAINTENANCE CHECK TASKS',
+  '[TIT] MULTILINE MODIFICATION',
    ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -156,6 +159,10 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] MAINTENANCE CHECK TASKS',
   :suites => ['[TIT] MAINTENANCE CHECK TASKS'
+  ]
+  },
+  {:name => '[TIT] MULTILINE MODIFICATION',
+  :suites => ['[TIT] MULTILINE MODIFICATION'
   ]
   },
 ]
