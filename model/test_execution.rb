@@ -16,7 +16,7 @@ class TestExecution
   property :pid, String
   property :exit_code, Integer
   property :stderr, Text
-  property :output_zip_base64, Text, :length => 4000000
+  property :output_zip_base64, Text, :length => 16000000
 
   belongs_to :environment
   belongs_to :test_suite
@@ -71,7 +71,7 @@ class TestExecution
   property :pid, String
   property :exit_code, Integer
   property :stderr, Text
-  property :output_zip_base64, Text, :length => 4000000
+  property :output_zip_base64, Text, :length => 16000000
 
   def self.rollback_running_executions
     (TestExecution.all(:status => 'Running') | TestExecution.all(:status => 'Preparing')).select do |te|
