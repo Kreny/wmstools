@@ -129,7 +129,7 @@ TEST_PACKAGES = [
   ]
   }, 
   {:name => '[TIT] USER MANAGEMENT',
-   :suites => ['[TIT] USER MANAGEMENT'
+  :suites => ['[TIT] USER MANAGEMENT'
   ]
   },
   {:name => '[TIT] MAP EXPORT',
