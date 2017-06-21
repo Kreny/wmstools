@@ -176,7 +176,7 @@ TEST_PACKAGES = [
   ]
   },
   {:name => 'PB FULL REGRESSION TEST',
-  :suites => ['[PB] REGRESSION'
+  :suites => ['[PB] REGRESSION',
   ]
   },
   {:name => '[PB] REGRESSION',
