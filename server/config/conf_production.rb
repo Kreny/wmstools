@@ -8,6 +8,7 @@ PORT = 80
 PERFORMANCE_TEST_RESULTS_PER_PAGE = 30
 
 TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
+  #cron defines time when the tests are run
   :cron => '30 4 * * *',
   :suites_environments =>
   [
@@ -31,7 +32,8 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MAINTENANCE WORK TASKS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MULTILINE MODIFICATION', :environment => 'TI_AUTO'}, 
-  {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'},       
+  {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'},
+  {:suite => '[PB] REGRESSION', :environment => 'TI_PB'},       
     ]
 }
 
@@ -59,11 +61,12 @@ TEST_SUITES = [
   {:name => '[TIT] MAINTENANCE CHECK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MULTILINE MODIFICATION', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] QUERIES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
+  {:name => '[PB] REGRESSION', :type => 'Suite', :environments => ['TI_PB'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
      
       ]
 
 TEST_PACKAGES = [
-  {:name => 'FULL REGRESSION TEST',
+  {:name => 'TIT FULL REGRESSION TEST',
   :suites => [
   '[TIT] OBJECT EDITOR',
   '[TIT] ATTRIBUTE SEARCH',
@@ -172,6 +175,14 @@ TEST_PACKAGES = [
   :suites => ['[TIT] QUERIES'
   ]
   },
+  {:name => 'PB FULL REGRESSION TEST',
+  :suites => ['[PB] REGRESSION'
+  ]
+  },
+  {:name => '[PB] REGRESSION',
+  :suites => ['[PB] REGRESSION'
+  ]
+  },
 ]
 
 PERFORMANCE_TESTS = []
@@ -184,4 +195,5 @@ DELIVERY_SITE_TYPES = []
 
 ENVIRONMENTS = [
   {:name => 'TI_AUTO', :wms_version => 'trunk'},
+  {:name => 'TI_PB', :wms_version => 'trunk'},
 ]
