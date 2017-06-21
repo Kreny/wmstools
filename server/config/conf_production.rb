@@ -91,6 +91,11 @@ TEST_PACKAGES = [
   '[TIT] QUERIES',
    ]
   },
+  {:name => 'PB FULL REGRESSION TEST',
+  :suites => [
+  '[PB] REGRESSION',
+  ]
+  },
   {:name => '[TIT] OBJECT EDITOR',
   :suites => ['[TIT] OBJECT EDITOR'
   ]
@@ -175,11 +180,6 @@ TEST_PACKAGES = [
   :suites => ['[TIT] QUERIES'
   ]
   },
-  {:name => 'PB FULL REGRESSION TEST',
-  :suites => [
-   '[PB] REGRESSION',
-   ]
-   },
   {:name => '[PB] REGRESSION',
   :suites => ['[PB] REGRESSION'
   ]
