@@ -33,7 +33,7 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MULTILINE MODIFICATION', :environment => 'TI_AUTO'}, 
   {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'},
-  {:suite => '[PB] REGRESSION', :environment => 'TI_PB'},       
+  {:suite => '[PB] REGRESSION', :environment => 'PB_AUTO'},       
     ]
 }
 
@@ -61,7 +61,7 @@ TEST_SUITES = [
   {:name => '[TIT] MAINTENANCE CHECK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MULTILINE MODIFICATION', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] QUERIES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
-  {:name => '[PB] REGRESSION', :type => 'Suite', :environments => ['TI_PB'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
+  {:name => '[PB] REGRESSION', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
      
       ]
 
