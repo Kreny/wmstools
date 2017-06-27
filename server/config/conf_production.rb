@@ -203,5 +203,5 @@ DELIVERY_SITE_TYPES = []
 
 ENVIRONMENTS = [
   {:name => 'TI_AUTO', :wms_version => 'trunk'},
-  {:name => 'TI_PB', :wms_version => 'trunk'},
+  {:name => 'PB_AUTO', :wms_version => 'trunk'},
 ]
