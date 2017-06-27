@@ -46,7 +46,7 @@ require_relative './rake/stage.rb'
 @production_agent_1.control_port = 8082
 @production_agent_1.change_log_file = '/root/work/wmsTools/agent/agent/deployment'
 @production_agent_1.rack_file = 'agent.ru'
-@production_agent_1.quota = 3
+@production_agent_1.quota = 4
 
 task(:default => [:test, :deploy_staging_server, :deploy_staging_agent]) {}
 
