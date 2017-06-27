@@ -33,8 +33,9 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MULTILINE MODIFICATION', :environment => 'TI_AUTO'}, 
   {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'},
-  {:suite => '[PB] REGRESSION', :environment => 'PB_AUTO'},       
-    ]
+  {:suite => '[PB] REGRESSION', :environment => 'PB_AUTO'},  
+  {:suite => '[PB] Others', :environment => 'PB_AUTO'},      
+  ]
 }
 
 # everything below this should be the same for both production and development
@@ -62,6 +63,7 @@ TEST_SUITES = [
   {:name => '[TIT] MULTILINE MODIFICATION', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] QUERIES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[PB] REGRESSION', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
+  {:name => '[PB] Others', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
      
       ]
 
@@ -94,6 +96,7 @@ TEST_PACKAGES = [
   {:name => 'PB FULL REGRESSION TEST',
   :suites => [
   '[PB] REGRESSION',
+  '[PB] Others',
   ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -181,7 +184,11 @@ TEST_PACKAGES = [
   ]
   },
   {:name => '[PB] REGRESSION',
-  :suites => ['[PB] REGRESSION'
+    :suites => ['[PB] REGRESSION'
+  ]
+  },
+  {:name => '[PB] Others',
+    :suites => ['[PB] Others'
   ]
   },
 ]
