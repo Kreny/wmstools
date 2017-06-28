@@ -34,7 +34,8 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MULTILINE MODIFICATION', :environment => 'TI_AUTO'}, 
   {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'},
   {:suite => '[PB] REGRESSION', :environment => 'PB_AUTO'},  
-  {:suite => '[PB] Others', :environment => 'PB_AUTO'},      
+  {:suite => '[PB] Others', :environment => 'PB_AUTO'},
+  {:suite => '[PB] Projects', :environment => 'PB_AUTO'},        
   ]
 }
 
@@ -64,6 +65,7 @@ TEST_SUITES = [
   {:name => '[TIT] QUERIES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[PB] REGRESSION', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
   {:name => '[PB] Others', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
+  {:name => '[PB] Projects', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
      
       ]
 
@@ -97,6 +99,7 @@ TEST_PACKAGES = [
   :suites => [
   '[PB] REGRESSION',
   '[PB] Others',
+  '[PB] Projects',
   ]
   },
   {:name => '[TIT] OBJECT EDITOR',
@@ -189,6 +192,10 @@ TEST_PACKAGES = [
   },
   {:name => '[PB] Others',
     :suites => ['[PB] Others'
+  ]
+  },
+  {:name => '[PB] Projects',
+    :suites => ['[PB] Projects'
   ]
   },
 ]
