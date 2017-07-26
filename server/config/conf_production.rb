@@ -9,7 +9,7 @@ PERFORMANCE_TEST_RESULTS_PER_PAGE = 30
 
 TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   #cron defines time when the tests are run
-  :cron => '30 4 * * *',
+  :cron => '0 3 * * *',
   :suites_environments =>
   [
   {:suite => '[TIT] OBJECT EDITOR', :environment => 'TI_AUTO'},
@@ -32,8 +32,7 @@ TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[TIT] MAINTENANCE WORK TASKS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MAINTENANCE CHECK TASKS', :environment => 'TI_AUTO'},
   {:suite => '[TIT] MULTILINE MODIFICATION', :environment => 'TI_AUTO'}, 
-  {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'},
-  {:suite => '[PB] REGRESSION', :environment => 'PB_AUTO'},  
+  {:suite => '[TIT] QUERIES', :environment => 'TI_AUTO'}, 
   {:suite => '[PB] Others', :environment => 'PB_AUTO'},
   {:suite => '[PB] Projects', :environment => 'PB_AUTO'},        
   ]
@@ -63,7 +62,6 @@ TEST_SUITES = [
   {:name => '[TIT] MAINTENANCE CHECK TASKS', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},    
   {:name => '[TIT] MULTILINE MODIFICATION', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
   {:name => '[TIT] QUERIES', :type => 'Suite', :environments => ['TI_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'TIT_gui_klepejir.xml'},
-  {:name => '[PB] REGRESSION', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
   {:name => '[PB] Others', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
   {:name => '[PB] Projects', :type => 'Suite', :environments => ['PB_AUTO'], :piazza => true, :default_number_of_tests => 10, :priority => 1, :project_file => 'Project_Budgeting.xml'},
       ]
@@ -96,7 +94,6 @@ TEST_PACKAGES = [
   },
   {:name => 'PB FULL REGRESSION TEST',
   :suites => [
-  '[PB] REGRESSION',
   '[PB] Others',
   '[PB] Projects',
   ]
@@ -183,10 +180,6 @@ TEST_PACKAGES = [
   },
   {:name => '[TIT] QUERIES',
   :suites => ['[TIT] QUERIES'
-  ]
-  },
-  {:name => '[PB] REGRESSION',
-    :suites => ['[PB] REGRESSION'
   ]
   },
   {:name => '[PB] Others',
