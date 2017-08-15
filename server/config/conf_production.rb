@@ -201,7 +201,7 @@ TEST_PACKAGES = [
   ]
   },
   {:name => '[PB] Part budget',
-    :suites => ['[PB] Part budget'
+    :suites => ['[PB] Part budget' 
   ]
   },
 ]
