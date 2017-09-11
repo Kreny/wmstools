@@ -59,4 +59,12 @@ VERSIONS = {:wms_trunk =>
   :watchers => [],
   :max_age => 48
   },
+  :wms_dev4trunk =>
+  {:name => 'dev4trunk', # DEV6
+  :protection_level => 'High',
+  :svn_branch => 'trunk/dev4trunk',
+  :responsible => 'vladan.krenek@tieto.com',
+  :watchers => [],
+  :max_age => 48
+  },
 }
