@@ -1,4 +1,5 @@
 require 'pty' if RUBY_PLATFORM =~ /linux/ || RUBY_PLATFORM =~ /darwin/ || RUBY_PLATFORM =~ /java/
+
 require 'zip'
 require 'base64'
 
@@ -13,7 +14,6 @@ class OperatingSystem
   START_STRING = '[SoapUITestCaseRunner] Running SoapUI tests in project'
   STOP_STRING = '[SoapUITestCaseRunner] Finished running SoapUI tests'
   REVISION_STRING = 'TITANIUM build .*'
-
   def project_file=(file)
     @project_file = file
     @project_file_extension = @project_file.split('.').last
@@ -133,12 +133,12 @@ class OperatingSystem
 
   def update_svn(branch)
     case @project_file_extension
-      when 'xml'
-        dir = SVN_HOME
-      when 'jar'
-        dir = JAR_HOME
-      else
-        dir = SVN_HOME
+    when 'xml'
+      dir = SVN_HOME
+    when 'jar'
+      dir = JAR_HOME
+    else
+      dir = SVN_HOME
     end
 
     command = "svn update #{dir}/#{branch}"
@@ -164,22 +164,21 @@ class OperatingSystem
         test_case.save
         test_case.update(:name => matched_tc_name)
         TestCaseResult.create(
-            {
-                :revision => test_execution.revision,
-                :test_case_id => matched_tc_id,
-                :environment_name => test_execution.environment.name,
-                :test_suite_name => test_execution.test_suite.name,
-                :test_execution_id => test_execution.id,
-                :result => matched_tc_result,
-                :message => line.lstrip
-            }
+        {
+          :revision => test_execution.revision,
+          :test_case_id => matched_tc_id,
+          :environment_name => test_execution.environment.name,
+          :test_suite_name => test_execution.test_suite.name,
+          :test_execution_id => test_execution.id,
+          :result => matched_tc_result,
+          :message => line.lstrip
+        }
         )
       rescue DataMapper::SaveFailureError => e
         $logger.error(e.resource.errors.inspect)
       end
     end
   end
-
 
   def scan_for_svn_revision(line, test_execution)
     if line.match(REVISION_STRING)
@@ -193,11 +192,10 @@ class OperatingSystem
       result = tc[0]
       ds_id = tc[1]
       DeliverySite.first_or_create(:id => ds_id,
-                                   :delivery_site_type_id => test_execution.delivery_site_type_id,
-                                   :environment => test_execution.environment) if result == 'PASSED'
+      :delivery_site_type_id => test_execution.delivery_site_type_id,
+      :environment => test_execution.environment) if result == 'PASSED'
     end
   end
-
 
   def scan_for_performance_measurements(line, test_execution)
     match = line.match(PERFORMANCE_TEST_MATCHING_REGEXP)
@@ -206,16 +204,15 @@ class OperatingSystem
       value = match[2]
       if PerformanceMeasurementPoint.get(id, test_execution.test_suite_name)
         PerformanceMeasurement.create(:test_execution_id => test_execution.id,
-                                      :performance_measurement_point_id => id,
-                                      :performance_measurement_point_test_suite_name => test_execution.test_suite_name,
-                                      :value => value
+        :performance_measurement_point_id => id,
+        :performance_measurement_point_test_suite_name => test_execution.test_suite_name,
+        :value => value
         )
       else
         $logger.warn("Performance measurement point '#{id}' is not defined for test suite '#{test_execution.test_suite_name}'")
       end
     end
   end
-
 
   def scan_for_finished_running(line, test_execution)
     if line.include?(STOP_STRING)
@@ -234,7 +231,10 @@ class OperatingSystem
       zipfile_name = "./#{folder}/tmp.zip"
       Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
         Dir["./#{folder}/*"].each do |file|
-          zipfile.add(file.sub("./#{folder}/", ''), file)
+          name = File.basename file
+          if !(name=='stdout.txt')
+            zipfile.add(file.sub("./#{folder}/", ''), file)
+          end
         end
       end
     rescue => e
@@ -242,7 +242,6 @@ class OperatingSystem
       p message
       $logger.error(message)
     end
-
     zipfile_name
   end
 
