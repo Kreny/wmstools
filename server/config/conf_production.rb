@@ -438,7 +438,7 @@ DELIVERY_SITE_TYPES = [
 ]
 
 ENVIRONMENTS = [
-  {:name => 'FAT5', :wms_version => '17.4'},
+  {:name => 'FAT5', :wms_version => '17.5'},
   {:name => 'FAT4', :wms_version => '17.2'},
   {:name => 'DEV3SKA', :wms_version => '5.1.0'},
   {:name => 'FAT1', :wms_version => 'trunk'},
