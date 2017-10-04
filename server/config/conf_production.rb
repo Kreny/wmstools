@@ -66,6 +66,26 @@ FORTUM_BRANCH_REGRESSION_TESTS_JOB = {
   ]
 }
 
+FORTUM_TRUNK_REGRESSION_TESTS_JOB = {
+  :cron => '0 11,1 * * *',
+  :suites_environments =>
+  [
+  {:suite => '[F] SMOKE TESTS', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 1', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 2', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 3', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 4', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 5', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 6', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 7', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 8', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 9', :environment => 'DEV4'},
+  {:suite => '[F] REGRESSION TESTS 10', :environment => 'DEV4'},    
+  {:suite => '[F] WEB SERVICE TESTS', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'DEV4'},
+  ]
+}
+
 #SKAGERAK_TRUNK_REGRESSION_TESTS_JOB = {
 #  :cron => '30 4 * * *',
 #  :suites_environments =>
@@ -118,6 +138,7 @@ FORTUM_INTEGRATION_TESTS_JOB = {
   [
   {:suite => '[F] INTEGRATION TESTS', :environment => 'FAT1'},
   {:suite => '[F] INTEGRATION TESTS', :environment => 'FAT4'},
+  {:suite => '[F] INTEGRATION TESTS', :environment => 'DEV4'},
   ]
 }
 
