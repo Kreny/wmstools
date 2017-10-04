@@ -67,7 +67,7 @@ FORTUM_BRANCH_REGRESSION_TESTS_JOB = {
 }
 
 FORTUM_TRUNK_REGRESSION_TESTS_JOB = {
-  :cron => '0 12 * * *',
+  :cron => '0 5 * * *',
   :suites_environments =>
   [
   {:suite => '[F] SMOKE TESTS', :environment => 'DEV4'},
