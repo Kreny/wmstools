@@ -46,28 +46,28 @@ FORTUM_TRUNK_REGRESSION_TESTS_JOB = {
   ]
 }
 
-FORTUM_BRANCH_REGRESSION_TESTS_JOB = {
-  :cron => '0 3 * * *',
-  :suites_environments =>
-  [
-  {:suite => '[F] SMOKE TESTS', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 1', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 2', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 3', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 4', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 5', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 6', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 7', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 8', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 9', :environment => 'FAT4'},
-  {:suite => '[F] REGRESSION TESTS 10', :environment => 'FAT4'},
-  {:suite => '[F] WEB SERVICE TESTS', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'FAT4'},
-  ]
-}
+#FORTUM_BRANCH_REGRESSION_TESTS_JOB = {
+#  :cron => '0 3 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[F] SMOKE TESTS', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 1', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 2', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 3', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 4', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 5', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 6', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 7', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 8', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 9', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS 10', :environment => 'FAT4'},
+#  {:suite => '[F] WEB SERVICE TESTS', :environment => 'FAT4'},
+##  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'FAT4'},
+#  ]
+#}
 
 FORTUM_DEV4_REGRESSION_TESTS_JOB = {
-  :cron => '0 5 * * *',
+  :cron => '0 3 * * *',
   :suites_environments =>
   [
   {:suite => '[F] SMOKE TESTS', :environment => 'DEV4'},
@@ -459,7 +459,7 @@ DELIVERY_SITE_TYPES = [
 ]
 
 ENVIRONMENTS = [
-  {:name => 'FAT5', :wms_version => '17.5'},
+  {:name => 'FAT5', :wms_version => '17.6'},
   {:name => 'FAT4', :wms_version => '17.2'},
   {:name => 'DEV3SKA', :wms_version => '5.1.0'},
   {:name => 'FAT1', :wms_version => 'trunk'},
@@ -472,6 +472,6 @@ ENVIRONMENTS = [
   {:name => 'FAT12', :wms_version => '5.2.0'},
   {:name => 'INT_BRANCH', :wms_version => '5.1.2'},
   {:name => 'INT_TRUNK', :wms_version => 'trunk'},
-  {:name => 'DEV4', :wms_version => 'dev4trunk'},
+  {:name => 'DEV4', :wms_version => '17.5'},
 
 ]

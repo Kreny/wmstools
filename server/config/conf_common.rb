@@ -28,17 +28,17 @@ VERSIONS = {:wms_trunk =>
   :max_age => 48
   },
   :wms_172 =>
-  {:name => '17.2', # FAT4 DEV4 DEVHF03
+  {:name => '17.2', # FAT4 DEVHF03
   :protection_level => 'Medium',
   :svn_branch => 'branch/17.2',
   :responsible => 'vladan.krenek@tieto.com',
   :watchers => [],
   :max_age => 48
   },
-  :wms_175 =>
-  {:name => '17.5', # FAT5
+  :wms_176 =>
+  {:name => '17.6', # FAT5
   :protection_level => 'High',
-  :svn_branch => 'branch/17.5',
+  :svn_branch => 'branch/17.6',
   :responsible => 'vladan.krenek@tieto.com',
   :watchers => [],
   :max_age => 48
@@ -59,8 +59,8 @@ VERSIONS = {:wms_trunk =>
   :watchers => [],
   :max_age => 48
   },
-  :wms_dev4trunk =>
-  {:name => 'dev4trunk', # DEV6
+  :wms_175 =>
+  {:name => '17.5', # DEV4
   :protection_level => 'High',
   :svn_branch => 'trunk/dev4trunk',
   :responsible => 'vladan.krenek@tieto.com',
