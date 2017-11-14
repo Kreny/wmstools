@@ -86,35 +86,6 @@ FORTUM_DEV4_REGRESSION_TESTS_JOB = {
   ]
 }
 
-#SKAGERAK_TRUNK_REGRESSION_TESTS_JOB = {
-#  :cron => '30 4 * * *',
-#  :suites_environments =>
-#  [
-#  {:suite => '[S] REGRESSION SET [daily]', :environment => 'DEV2SKA'},
-#  {:suite => '[S] REGRESSION SET 1 [roll out]', :environment => 'DEV2SKA'},
-#  {:suite => '[S] REGRESSION SET 2 [roll out]', :environment => 'DEV2SKA'},
-#  {:suite => '[S] REGRESSION SET [daily_duringRollOut]', :environment => 'DEV2SKA'},
-#  {:suite => '[S] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
-#  {:suite => '[RM] WMS INTEGRATION', :environment => 'DEV2SKA'},
-#  {:suite => '[RM] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
-#  {:suite => '[S][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV2SKA'},
-#  ]
-#}
-
-#SKAGERAK_BRANCH_REGRESSION_TESTS_JOB = {
-#  :cron => '30 5 * * *',
-#  :suites_environments =>
-#  [
-#  {:suite => '[S] REGRESSION SET [daily]', :environment => 'DEV3SKA'},
-#  {:suite => '[S] REGRESSION SET 1 [roll out]', :environment => 'DEV3SKA'},
-#  {:suite => '[S] REGRESSION SET 2 [roll out]', :environment => 'DEV3SKA'},
-#  {:suite => '[S] REGRESSION SET [daily_duringRollOut]', :environment => 'DEV3SKA'},
-#  {:suite => '[S] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
-#  {:suite => '[RM] WMS INTEGRATION', :environment => 'DEV3SKA'},
-#  {:suite => '[RM] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
-#  {:suite => '[S][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV3SKA'},
-#  ]
-#}
 
 FORTUM_PERFORMANCE_TESTS_JOB = {
   :cron => '*/10 5,22 * * *',
@@ -141,36 +112,6 @@ FORTUM_INTEGRATION_TESTS_JOB = {
   {:suite => '[F] INTEGRATION TESTS', :environment => 'DEV4'},
   ]
 }
-
-#SKAGERAK_LOAD_TESTS_JOB = {
-#  :cron => '0 7 * * *',
-#  :suites_environments =>
-#  [
-#  {:suite => '[S] LOAD BALANCER', :environment => 'DEV2SKA'},
-#  ]
-#}
-
-#SSN_TRUNK_REGRESSION_TESTS_JOB = {
-#  :cron => '30 5 * * *',
-#  :suites_environments =>
-#  [
-#  {:suite => '[SSN] REGRESSION TESTS', :environment => 'DEV7'},
-#  {:suite => '[SSN] REGRESSION TESTS GUI 1', :environment => 'DEV7'},
-#  {:suite => '[SSN][AM] REGRESSION TESTS', :environment => 'DEV7'},
-#  {:suite => '[SSN][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV7'},
-#  ]
-#}
-
-#SSN_BRANCH_REGRESSION_TESTS_JOB = {
-#  :cron => '30 4 * * *',
-#  :suites_environments =>
-#  [
-#  {:suite => '[SSN] REGRESSION TESTS', :environment => 'DEV6'},
-#  {:suite => '[SSN] REGRESSION TESTS GUI 1', :environment => 'DEV6'},
-#  {:suite => '[SSN][AM] REGRESSION TESTS', :environment => 'DEV6'},
-#  {:suite => '[SSN][MOB] REGRESSION TESTS GUI 1', :environment => 'DEV6'},
-#  ]
-#}
 
 HAFSLUND_TRUNK_REGRESSION_TESTS_JOB = {
   :cron => '0 5 * * *',
@@ -208,19 +149,6 @@ TEST_SUITES = [
   {:name => '[HE] REGRESSION TESTS 1', :type => 'Suite', :environments => ['DEVHF02', 'DEVHF03'], :piazza => true, :default_number_of_tests => 4, :priority => 370, :project_file => 'Hafslund_elhub_regression_benkepet.xml'},
   {:name => '[HE] REGRESSION TESTS 2', :type => 'Suite', :environments => ['DEVHF02'], :piazza => true, :default_number_of_tests => 4, :priority => 380, :project_file => 'Hafslund_elhub_regression_benkepet.xml'},
   {:name => '[HE] BUFFER TESTS', :type => 'Suite', :environments => ['DEVHF03'], :piazza => false, :default_number_of_tests => 4, :priority => 390, :project_file => 'Hafslund_elhub_regression_benkepet.xml', :buffer => true},
-#  {:name => '[S] REGRESSION SET [daily]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 42, :priority => 240, :project_file => 'Skagerak_daily_plohalen.xml'},
-#  {:name => '[S] REGRESSION SET 1 [roll out]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 15, :priority => 250, :project_file => 'Skagerak_rollOut_plohalen.xml'},
-#  {:name => '[S] REGRESSION SET 2 [roll out]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 35, :priority => 260, :project_file => 'Skagerak_rollOut_plohalen.xml'},
-#  {:name => '[S] REGRESSION SET [daily_duringRollOut]', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 20, :priority => 270, :project_file => 'Skagerak_daily_duringRollOut_plohalen.xml'},
-#  {:name => '[S] REGRESSION TESTS GUI 1', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 3, :priority => 280, :project_file => 'Skagerak_gui_plohalen.xml'},
-#  {:name => '[S] LOAD BALANCER', :type => 'Suite', :environments => ['DEV2SKA'], :piazza => false, :default_number_of_tests => 3, :priority => 281, :project_file => 'Skagerak_gui_plohalen.xml'},
-#  {:name => '[RM] WMS INTEGRATION', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 10, :priority => 290, :project_file => 'RM_regression_gawarshr.xml'},
-#  {:name => '[RM] REGRESSION TESTS GUI 1', :type => 'Suite', :environments => ['DEV2SKA','DEV3SKA'], :piazza => true, :default_number_of_tests => 10, :priority => 300, :project_file => 'RM_gui_gawarshr.xml'},
-#  {:name => '[S][MOB] REGRESSION TESTS GUI 1', :type => 'Suite', :environments => ['DEV2SKA', 'DEV3SKA'], :piazza => true, :default_number_of_tests => 10, :priority => 340, :project_file => 'MOB_gui_gajdokat.xml'},
-#  {:name => '[SSN][MOB] REGRESSION TESTS GUI 1', :type => 'Suite', :environments => ['DEV7', 'DEV6'], :piazza => true, :default_number_of_tests => 10, :priority => 341, :project_file => 'MOB_gui_gajdokat.xml'},
-#  {:name => '[SSN] REGRESSION TESTS', :type => 'Suite', :environments => ['DEV7', 'DEV6'], :piazza => true, :default_number_of_tests => 10, :priority => 350, :project_file => 'SSN_regresion_tomalmar.xml'},
-#  {:name => '[SSN] REGRESSION TESTS GUI 1', :type => 'Suite', :environments => ['DEV7', 'DEV6'], :piazza => true, :default_number_of_tests => 10, :priority => 360, :project_file => 'SSN_gui_plohalen.xml'},
-#  {:name => '[SSN][AM] REGRESSION TESTS', :type => 'Suite', :environments => ['DEV7', 'DEV6'], :piazza => true, :default_number_of_tests => 10, :priority => 360, :project_file => 'SSN_AM_regression_chandkan.xml'},
 ]
 
 TEST_PACKAGES = [
@@ -244,19 +172,6 @@ TEST_PACKAGES = [
   '[H] REGRESSION TESTS 2',
   '[HE] REGRESSION TESTS 1',
   '[HE] REGRESSION TESTS 2',
-#  '[S] REGRESSION SET [daily]',
-#  '[S] REGRESSION SET 1 [roll out]',
-#  '[S] REGRESSION SET 2 [roll out]',
-#  '[S] REGRESSION SET [daily_duringRollOut]',
-#  '[S] REGRESSION TESTS GUI 1',
-#  '[S] LOAD BALANCER',
-#  '[RM] WMS INTEGRATION',
-#  '[RM] REGRESSION TESTS GUI 1',
-#  '[S][MOB] REGRESSION TESTS GUI 1',
-#  '[SSN][MOB] REGRESSION TESTS GUI 1',
-#  '[SSN] REGRESSION TESTS',
-#  '[SSN] REGRESSION TESTS GUI 1',
-#  '[SSN][AM] REGRESSION TESTS',
   ]
   },
   {:name => '[F] SMOKE TESTS',
@@ -331,30 +246,6 @@ TEST_PACKAGES = [
   :suites => ['[F] INTEGRATION TESTS'
   ]
   },
-#  {:name => '[S] REGRESSION SET [daily]',
-#  :suites => ['[S] REGRESSION SET [daily]'
-#  ]
-#  },
-#  {:name => '[S] REGRESSION SET 1 [roll out]',
-#  :suites => ['[S] REGRESSION SET 1 [roll out]'
-#  ]
-#  },
-#  {:name => '[S] REGRESSION SET 2 [roll out]',
-#  :suites => ['[S] REGRESSION SET 2 [roll out]'
-#  ]
-#  },
-#  {:name => '[S] REGRESSION SET [daily_duringRollOut]',
-#  :suites => ['[S] REGRESSION SET [daily_duringRollOut]'
-#  ]
-#  },
-#  {:name => '[S] REGRESSION TESTS GUI 1',
-#  :suites => ['[S] REGRESSION TESTS GUI 1'
-#  ]
-#  },
-#  {:name => '[S] LOAD BALANCER',
-#  :suites => ['[S] LOAD BALANCER'
-#  ]
-#  },
   {:name => '[H] REGRESSION TESTS 1',
   :suites => ['[H] REGRESSION TESTS 1'
   ]
@@ -379,34 +270,6 @@ TEST_PACKAGES = [
   :suites => ['[H] BUFFER TESTS'
   ]
   },
-  {:name => '[RM] WMS INTEGRATION',
-  :suites => ['[RM] WMS INTEGRATION'
-  ]
-  },
-  {:name => '[RM] REGRESSION TESTS GUI 1',
-  :suites => ['[RM] REGRESSION TESTS GUI 1'
-  ]
-  },
-#  {:name => '[S][MOB] REGRESSION TESTS GUI 1',
-#  :suites => ['[S][MOB] REGRESSION TESTS GUI 1'
-#  ]
-#  },
-#  {:name => '[SSN][MOB] REGRESSION TESTS GUI 1',
-#  :suites => ['[SSN][MOB] REGRESSION TESTS GUI 1'
-#  ]
-#  },
-#  {:name => '[SSN] REGRESSION TESTS',
-#  :suites => ['[SSN] REGRESSION TESTS'
-#  ]
-#  },
-#  {:name => '[SSN] REGRESSION TESTS GUI 1',
-#  :suites => ['[SSN] REGRESSION TESTS GUI 1'
-#  ]
-#  },
-#  {:name => '[SSN][AM] REGRESSION TESTS',
-#  :suites => ['[SSN][AM] REGRESSION TESTS'
-#  ]
-#  },
 ]
 
 PERFORMANCE_TESTS = [
