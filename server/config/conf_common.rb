@@ -36,21 +36,13 @@ VERSIONS = {:wms_trunk =>
   :max_age => 48
   },
   :wms_176 =>
-  {:name => '17.6', # FAT5
+  {:name => '17.6', # FAT5 DEVHF01
   :protection_level => 'High',
   :svn_branch => 'branch/17.6',
   :responsible => 'vladan.krenek@tieto.com',
   :watchers => [],
   :max_age => 48
   },
-  :wms_173 =>
-  {:name => '17.3', #  DEVHF01
-  :protection_level => 'High',
-  :svn_branch => 'branch/17.3',
-  :responsible => 'vladan.krenek@tieto.com',
-  :watchers => [],
-  :max_age => 48
-  }, 
   :wms_511 =>
   {:name => '5.1.1', # DEV6
   :protection_level => 'High',

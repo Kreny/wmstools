@@ -329,7 +329,7 @@ ENVIRONMENTS = [
   {:name => 'DEV2SKA', :wms_version => 'trunk'},
   {:name => 'DEV6', :wms_version => '5.1.1'},
   {:name => 'DEV7', :wms_version => 'trunk'},
-  {:name => 'DEVHF01', :wms_version => '17.3'},
+  {:name => 'DEVHF01', :wms_version => '17.6'},
   {:name => 'DEVHF02', :wms_version => 'trunk'},
   {:name => 'DEVHF03', :wms_version => 'trunk'},
   {:name => 'FAT12', :wms_version => '5.2.0'},
