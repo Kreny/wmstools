@@ -12,7 +12,7 @@ class OperatingSystem
   PERFORMANCE_TEST_MATCHING_REGEXP = /\[(PERF\d*.?)\]\[(\d*)\]/
   START_STRING = '[SoapUITestCaseRunner] Running SoapUI tests in project'
   STOP_STRING = '[SoapUITestCaseRunner] Finished running SoapUI tests'
-  REVISION_STRING = 'WMS build #\d{5}'
+  REVISION_STRING = 'WMS build #\d{6}'
 
   def project_file=(file)
     @project_file = file
