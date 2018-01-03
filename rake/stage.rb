@@ -47,7 +47,7 @@ class Stage
 
   def bundle_install
     ssh_exec("source /etc/profile.d/rvm.sh; rvm use 2.2.2")
-    ssh_exec("cd #{@pa.th}; bundle install")
+    ssh_exec("cd #{@path}; bundle install")
   end
 
   def modify_config(file, key, new_value)
