@@ -38,7 +38,7 @@ class Stage
     if @path =~ /^\/\w+\/\w+/
       ssh_exec("rm -rf #{@path}")
       #ssh_exec("svn export #{SVN_BASE_PATH} #{@path}")
-      ssh_exec("cp -rf /root/work/git/wmstools/ #{@path}")
+      ssh_exec("cp -rf /home/wmstools/work/git/wmstools/ #{@path}")
       write_deployment_timestamp
     else
       raise "Wrong path: #{@path}"
