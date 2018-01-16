@@ -4,7 +4,7 @@ require_relative './rake/stage.rb'
 
 @staging_server = Stage.new
 @staging_server.name = 'staging_server'
-@staging_server.hostname = 'NMA02'
+@staging_server.hostname = 'uw001837'
 @staging_server.username = 'root'
 @staging_server.password = 'bender'
 @staging_server.path = '/root/work/wmsTools/server_staging'
@@ -15,7 +15,7 @@ require_relative './rake/stage.rb'
 
 @staging_agent = Stage.new
 @staging_agent.name = 'staging_agent'
-@staging_agent.hostname = 'NMA02'
+@staging_agent.hostname = 'uw001837'
 @staging_agent.username = 'root'
 @staging_agent.password = 'bender'
 @staging_agent.path = '/root/work/wmsTools/agent_staging'
@@ -27,7 +27,7 @@ require_relative './rake/stage.rb'
 
 @production_server = Stage.new
 @production_server.name = 'production_server'
-@production_server.hostname = 'NMA02'
+@production_server.hostname = 'uw001837'
 @production_server.username = 'root'
 @production_server.password = 'bender'
 @production_server.path = '/root/work/wmsTools/server'
@@ -38,7 +38,7 @@ require_relative './rake/stage.rb'
 
 @production_agent_1 = Stage.new
 @production_agent_1.name = 'production_agent_1'
-@production_agent_1.hostname = 'NMA02'
+@production_agent_1.hostname = 'uw001837'
 @production_agent_1.username = 'root'
 @production_agent_1.password = 'bender'
 @production_agent_1.path = '/root/work/wmsTools/agent'
