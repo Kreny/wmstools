@@ -8,7 +8,7 @@ require_relative './rake/stage.rb'
 @staging_server.username = 'wmstools'
 @staging_server.password = 'bender'
 @staging_server.path = '/home/wmstools/work/wmsTools/server_staging'
-@staging_server.port = 8080
+@staging_server.port = 80
 @staging_server.control_port = 8086
 @staging_server.change_log_file = '/home/wmstools/work/wmsTools/server_staging/server/views/change_log.erb'
 @staging_server.rack_file = 'server.ru'
@@ -31,7 +31,7 @@ require_relative './rake/stage.rb'
 @production_server.username = 'wmstools'
 @production_server.password = 'bender'
 @production_server.path = '/home/wmstools/work/wmsTools/server'
-@production_server.port = 8080
+@production_server.port = 80
 @production_server.control_port = 8083
 @production_server.change_log_file = '/home/wmstools/work/wmsTools/server/server/views/change_log.erb'
 @production_server.rack_file = 'server.ru'
