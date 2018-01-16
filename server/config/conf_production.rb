@@ -46,45 +46,45 @@ FORTUM_TRUNK_REGRESSION_TESTS_JOB = {
   ]
 }
 
-#FORTUM_BRANCH_REGRESSION_TESTS_JOB = {
-#  :cron => '0 3 * * *',
-#  :suites_environments =>
-#  [
-#  {:suite => '[F] SMOKE TESTS', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 1', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 2', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 3', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 4', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 5', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 6', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 7', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 8', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 9', :environment => 'FAT4'},
-#  {:suite => '[F] REGRESSION TESTS 10', :environment => 'FAT4'},
-#  {:suite => '[F] WEB SERVICE TESTS', :environment => 'FAT4'},
-##  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'FAT4'},
-#  ]
-#}
-
-FORTUM_DEV4_REGRESSION_TESTS_JOB = {
+FORTUM_BRANCH_REGRESSION_TESTS_JOB = {
   :cron => '0 3 * * *',
   :suites_environments =>
   [
-  {:suite => '[F] SMOKE TESTS', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 1', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 2', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 3', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 4', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 5', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 6', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 7', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 8', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 9', :environment => 'DEV4'},
-  {:suite => '[F] REGRESSION TESTS 10', :environment => 'DEV4'},    
-  {:suite => '[F] WEB SERVICE TESTS', :environment => 'DEV4'},
-#  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'DEV4'},
+  {:suite => '[F] SMOKE TESTS', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 1', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 2', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 3', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 4', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 5', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 6', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 7', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 8', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 9', :environment => 'FAT4'},
+  {:suite => '[F] REGRESSION TESTS 10', :environment => 'FAT4'},
+  {:suite => '[F] WEB SERVICE TESTS', :environment => 'FAT4'},
+#  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'FAT4'},
   ]
 }
+
+#FORTUM_DEV4_REGRESSION_TESTS_JOB = {
+#  :cron => '0 3 * * *',
+#  :suites_environments =>
+#  [
+#  {:suite => '[F] SMOKE TESTS', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 1', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 2', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 3', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 4', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 5', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 6', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 7', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 8', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 9', :environment => 'DEV4'},
+#  {:suite => '[F] REGRESSION TESTS 10', :environment => 'DEV4'},    
+#  {:suite => '[F] WEB SERVICE TESTS', :environment => 'DEV4'},
+##  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'DEV4'},
+#  ]
+#}
 
 
 FORTUM_PERFORMANCE_TESTS_JOB = {
@@ -323,7 +323,7 @@ DELIVERY_SITE_TYPES = [
 
 ENVIRONMENTS = [
   {:name => 'FAT5', :wms_version => '17.6'},
-  {:name => 'FAT4', :wms_version => '17.2'},
+  {:name => 'FAT4', :wms_version => '18.1'},
   {:name => 'DEV3SKA', :wms_version => '5.1.0'},
   {:name => 'FAT1', :wms_version => 'trunk'},
   {:name => 'DEV2SKA', :wms_version => 'trunk'},

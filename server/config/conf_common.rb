@@ -27,10 +27,10 @@ VERSIONS = {:wms_trunk =>
   :watchers => [],
   :max_age => 48
   },
-  :wms_172 =>
-  {:name => '17.2', # FAT4 DEVHF03
+  :wms_181 =>
+  {:name => '18.1', # FAT4
   :protection_level => 'Medium',
-  :svn_branch => 'branch/17.2',
+  :svn_branch => 'branch/18.1',
   :responsible => 'vladan.krenek@tieto.com',
   :watchers => [],
   :max_age => 48
