@@ -28,7 +28,7 @@ VERSIONS = {:wms_trunk =>
   :max_age => 48
   },
   :wms_181 =>
-  {:name => '18.1', # FAT4
+  {:name => '18.1', # FAT4 DEVFH01
   :protection_level => 'Medium',
   :svn_branch => 'branch/18.1',
   :responsible => 'vladan.krenek@tieto.com',
@@ -36,7 +36,7 @@ VERSIONS = {:wms_trunk =>
   :max_age => 48
   },
   :wms_176 =>
-  {:name => '17.6', # FAT5 DEVHF01
+  {:name => '17.6', # FAT5 
   :protection_level => 'High',
   :svn_branch => 'branch/17.6',
   :responsible => 'vladan.krenek@tieto.com',
