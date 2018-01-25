@@ -6,7 +6,7 @@ require_relative './rake/stage.rb'
 @staging_server.name = 'staging_server'
 @staging_server.hostname = 'NMA02'
 @staging_server.username = 'wmstools'
-@staging_server.password = 'bender'
+@staging_server.password = 'Nakupelle7'
 @staging_server.path = '/home/wmstools/work/wmsTools/server_staging'
 @staging_server.port = 8080
 @staging_server.control_port = 8086
@@ -17,7 +17,7 @@ require_relative './rake/stage.rb'
 @staging_agent.name = 'staging_agent'
 @staging_agent.hostname = 'NMA02'
 @staging_agent.username = 'wmstools'
-@staging_agent.password = 'bender'
+@staging_agent.password = 'Nakupelle7'
 @staging_agent.path = '/home/wmstools/work/wmsTools/agent_staging'
 @staging_agent.port = 8081
 @staging_agent.control_port = 8082
@@ -29,7 +29,7 @@ require_relative './rake/stage.rb'
 @production_server.name = 'production_server'
 @production_server.hostname = 'NMA02'
 @production_server.username = 'wmstools'
-@production_server.password = 'bender'
+@production_server.password = 'Nakupelle7'
 @production_server.path = '/home/wmstools/work/wmsTools/server'
 @production_server.port = 8080
 @production_server.control_port = 8083
@@ -40,7 +40,7 @@ require_relative './rake/stage.rb'
 @production_agent_1.name = 'production_agent_1'
 @production_agent_1.hostname = 'NMA02'
 @production_agent_1.username = 'wmstools'
-@production_agent_1.password = 'bender'
+@production_agent_1.password = 'Nakupelle7'
 @production_agent_1.path = '/home/wmstools/work/wmsTools/agent'
 @production_agent_1.port = 8081
 @production_agent_1.control_port = 8082
