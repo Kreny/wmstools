@@ -1,4 +1,4 @@
-DATA_SOURCE = 'mysql://wmsuser:SalvatorDali01@10.0.219.120/wmstools'
+DATA_SOURCE = 'mysql://wmsuser:SalvatorDali01@NMA02/wmstools'
 THIS_AGENT_ID = 'NMA02'
 SOAPUI_HOME = '/home/wmstools/work/wmsTools/soapui' # without trailing slash
 SVN_HOME = '/home/wmstools/work/wmsTools/svn' # without trailing slash
