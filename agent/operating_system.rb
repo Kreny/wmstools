@@ -27,13 +27,13 @@ class OperatingSystem
       command << " -Dsoapui.home=#{SOAPUI_HOME}/bin"
       command << " -Dsoapui.ext.libraries=#{SVN_HOME}/#{branch}/requiredJARs"
       command << " -Dsoapui.ext.listeners=#{SOAPUI_HOME}/bin/listeners -Dsoapui.ext.actions=#{SOAPUI_HOME}/bin/actions"
-      command << " -cp #{SOAPUI_HOME}/bin/soapui-5.2.0.jar:#{SOAPUI_HOME}/lib/*"
+      command << " -cp #{SOAPUI_HOME}/bin/soapui-5.4.0.jar:#{SOAPUI_HOME}/lib/*"
       command << " com.eviware.soapui.tools.SoapUITestCaseRunner -t #{SOAPUI_HOME}/soapui-settings.xml"
       command << " -s '#{@suite}'"
       command << " -c '#{@test_case}'" if test_case
       command << " -r #{SVN_HOME}/#{branch}/#{@project_file}"
-      command << " -f '/root/work/wmsTools/agent/#{@folder}'"
-      command << " -P screenshotPath='/root/work/wmsTools/agent/#{@folder}'"
+      command << " -f '/home/wmstools/work/wmsTools/agent/#{@folder}'"
+      command << " -P screenshotPath='/home/wmstools/work/wmsTools/agent/#{@folder}'"
     elsif @project_file_extension == 'jar'
       command << " -cp #{JAR_HOME}/#{branch}/target/#{@project_file}:#{JAR_HOME}/#{branch}/target/lib/*"
       command << ' com.tieto.test.ui.demo.Run'
