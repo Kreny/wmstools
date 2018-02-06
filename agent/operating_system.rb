@@ -141,7 +141,7 @@ class OperatingSystem
       dir = SVN_HOME
     end
 
-    command = "svn update #{dir}/#{branch}"
+    command = "svn update #{dir}/#{branch} --non-interactive --no-auth-cache --username namuser --password j8Es3Fzp"
     system command
     $logger.error "Failed to update svn on branch '#{branch}'." unless $? == 0
   end
