@@ -40,7 +40,8 @@ FORTUM_TRUNK_REGRESSION_TESTS_JOB = {
   {:suite => '[F] REGRESSION TESTS 7', :environment => 'FAT1'},
   {:suite => '[F] REGRESSION TESTS 8', :environment => 'FAT1'},
   {:suite => '[F] REGRESSION TESTS 9', :environment => 'FAT1'},
-  {:suite => '[F] REGRESSION TESTS 10', :environment => 'FAT1'},    
+  {:suite => '[F] REGRESSION TESTS 10', :environment => 'FAT1'},      
+  {:suite => '[F] REGRESSION TESTS 11', :environment => 'FAT1'}, 
   {:suite => '[F] WEB SERVICE TESTS', :environment => 'FAT1'},
 #  {:suite => '[F] REGRESSION TESTS GUI 1', :environment => 'FAT1'},
   ]
@@ -137,6 +138,7 @@ TEST_SUITES = [
   {:name => '[F] REGRESSION TESTS 8', :type => 'Suite', :environments => ['FAT1', 'FAT4', 'FAT5', 'FAT12', 'DEV4'], :piazza => true, :default_number_of_tests => 49, :priority => 100, :project_file => 'Fortum_regression_krenevla.xml'},
   {:name => '[F] REGRESSION TESTS 9', :type => 'Suite', :environments => ['FAT1', 'FAT4', 'FAT5', 'FAT12', 'DEV4'], :piazza => true, :default_number_of_tests => 18, :priority => 110, :project_file => 'Fortum_regression_benkepet.xml'},
   {:name => '[F] REGRESSION TESTS 10', :type => 'Suite', :environments => ['FAT1', 'FAT4', 'FAT5', 'DEV4'], :piazza => true, :default_number_of_tests => 5, :priority => 110, :project_file => 'Fortum_regression_benkepet.xml'},
+  {:name => '[F] REGRESSION TESTS 11', :type => 'Suite', :environments => ['FAT1', 'FAT4', 'FAT5', 'DEV4'], :piazza => true, :default_number_of_tests => 39, :priority => 115, :project_file => 'Fortum_regression_benkepet.xml'},
 #  {:name => '[F] REGRESSION TESTS GUI 1', :type => 'Suite', :environments => ['FAT1', 'FAT4', 'FAT5'], :piazza => true, :default_number_of_tests => 10, :priority => 111, :project_file => 'Fortum_gui_benkepet.xml'},
   {:name => '[F] BUFFER TESTS', :type => 'Suite', :environments => ['FAT1', 'FAT4', 'FAT5', 'FAT12', 'DEV4'], :piazza => false, :default_number_of_tests => 4, :priority => 120, :project_file => 'Fortum_regression_krenevla.xml', :buffer => true},
   {:name => '[F] LOAD TESTS', :type => 'Suite', :environments => ['FAT1'], :piazza => false, :priority => 130, :project_file => 'Fortum_regression_krenevla.xml', :load => true},
@@ -166,6 +168,7 @@ TEST_PACKAGES = [
   '[F] REGRESSION TESTS 8',
   '[F] REGRESSION TESTS 9',
   '[F] REGRESSION TESTS 10',
+  '[F] REGRESSION TESTS 11',
 #  '[F] REGRESSION TESTS GUI 1',
   '[F] INTEGRATION TESTS',
   '[H] REGRESSION TESTS 1',
@@ -216,6 +219,10 @@ TEST_PACKAGES = [
   },
   {:name => '[F] REGRESSION TESTS 10',
   :suites => ['[F] REGRESSION TESTS 10'
+  ]
+  },
+  {:name => '[F] REGRESSION TESTS 11',
+  :suites => ['[F] REGRESSION TESTS 11'
   ]
   },
   {:name => '[F] LOAD TESTS',
