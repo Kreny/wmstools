@@ -9,7 +9,7 @@ PERFORMANCE_TEST_RESULTS_PER_PAGE = 30
 
 TITANIUM_TRUNK_REGRESSION_TESTS_JOB = {
   #cron defines time when the tests are run
-  :cron => '5 0 * * *',
+  :cron => '15 0 * * *',
   :suites_environments =>
   [
   {:suite => '[TIT] OBJECT EDITOR', :environment => 'TI_AUTO'},
